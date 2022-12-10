@@ -126,8 +126,7 @@ namespace VARLightControl
 
     // Light Control
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-    public delegate void LCCallbackMethod(LC_CALLBACK_ARG_T arg);//委托类型，主要用于回调。
-                                                                 // Delegate type, mainly used for callback.
+    public delegate void LCCallbackMethod(LC_CALLBACK_ARG_T arg);// Delegate type, mainly used for callback.
 
     public static class NativeAPI
     {
