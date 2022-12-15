@@ -44,13 +44,25 @@
             this.m_comboBoxModeCh3 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
+            this.button3 = new System.Windows.Forms.Button();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.m_checkBoxSwitchCh0 = new System.Windows.Forms.CheckBox();
@@ -60,8 +72,8 @@
             this.m_comboBoxModeCh0 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.trackBar4 = new System.Windows.Forms.TrackBar();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.m_trackBarCh0 = new System.Windows.Forms.TrackBar();
+            this.m_numericUpDownCh0 = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.m_btnConnect = new System.Windows.Forms.Button();
             this.m_comboBoxPort = new System.Windows.Forms.ComboBox();
@@ -77,14 +89,16 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_trackBarCh0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_numericUpDownCh0)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -234,15 +248,32 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.checkBox2);
             this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.trackBar3);
+            this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.numericUpDown2);
+            this.groupBox3.Controls.Add(this.numericUpDown4);
+            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Location = new System.Drawing.Point(7, 381);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(1044, 137);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "CH2";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(799, 66);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(55, 20);
+            this.checkBox2.TabIndex = 0;
+            this.checkBox2.Text = "OFF";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.m_checkBoxSwitchCh0_CheckedChanged);
             // 
             // label5
             // 
@@ -253,12 +284,32 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Mode";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(674, 93);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 30);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Write";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.m_btnWriteCh0_Click);
+            // 
             // trackBar3
             // 
             this.trackBar3.Location = new System.Drawing.Point(6, 30);
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(652, 56);
             this.trackBar3.TabIndex = 2;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(554, 93);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 30);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Read";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.m_btnReadCh0_Click);
             // 
             // numericUpDown2
             // 
@@ -267,17 +318,79 @@
             this.numericUpDown2.Size = new System.Drawing.Size(82, 22);
             this.numericUpDown2.TabIndex = 1;
             // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(313, 101);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown4.TabIndex = 5;
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.m_HoldingTimeCh0_ValueChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(54, 98);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(159, 24);
+            this.comboBox2.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(219, 101);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 16);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Holding Time";
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.numericUpDown3);
             this.groupBox1.Controls.Add(this.trackBar1);
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(7, 233);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1040, 131);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CH1";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(802, 57);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(55, 20);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "OFF";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.m_checkBoxSwitchCh0_CheckedChanged);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(674, 88);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 30);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Write";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.m_btnWriteCh0_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(554, 87);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 30);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Read";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.m_btnReadCh0_Click);
             // 
             // label3
             // 
@@ -288,6 +401,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Mode";
             // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(313, 95);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDown3.TabIndex = 5;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.m_HoldingTimeCh0_ValueChanged);
+            // 
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(6, 21);
@@ -295,12 +416,29 @@
             this.trackBar1.Size = new System.Drawing.Size(652, 56);
             this.trackBar1.TabIndex = 2;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(54, 92);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(159, 24);
+            this.comboBox1.TabIndex = 4;
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(674, 21);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(82, 22);
             this.numericUpDown1.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(219, 95);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 16);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Holding Time";
             // 
             // groupBox
             // 
@@ -311,8 +449,8 @@
             this.groupBox.Controls.Add(this.m_comboBoxModeCh0);
             this.groupBox.Controls.Add(this.label6);
             this.groupBox.Controls.Add(this.label1);
-            this.groupBox.Controls.Add(this.trackBar4);
-            this.groupBox.Controls.Add(this.numericUpDown4);
+            this.groupBox.Controls.Add(this.m_trackBarCh0);
+            this.groupBox.Controls.Add(this.m_numericUpDownCh0);
             this.groupBox.Location = new System.Drawing.Point(4, 78);
             this.groupBox.Name = "groupBox";
             this.groupBox.Size = new System.Drawing.Size(1043, 132);
@@ -393,20 +531,21 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Mode";
             // 
-            // trackBar4
+            // m_trackBarCh0
             // 
-            this.trackBar4.Location = new System.Drawing.Point(9, 21);
-            this.trackBar4.Name = "trackBar4";
-            this.trackBar4.Size = new System.Drawing.Size(652, 56);
-            this.trackBar4.TabIndex = 2;
-            this.trackBar4.Scroll += new System.EventHandler(this.m_trackBarCh0);
+            this.m_trackBarCh0.Location = new System.Drawing.Point(9, 21);
+            this.m_trackBarCh0.Name = "m_trackBarCh0";
+            this.m_trackBarCh0.Size = new System.Drawing.Size(652, 56);
+            this.m_trackBarCh0.TabIndex = 2;
+            this.m_trackBarCh0.ValueChanged += new System.EventHandler(this.m_trackBarCh0_ValueChanged);
             // 
-            // numericUpDown4
+            // m_numericUpDownCh0
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(677, 21);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(82, 22);
-            this.numericUpDown4.TabIndex = 1;
+            this.m_numericUpDownCh0.Location = new System.Drawing.Point(677, 21);
+            this.m_numericUpDownCh0.Name = "m_numericUpDownCh0";
+            this.m_numericUpDownCh0.Size = new System.Drawing.Size(82, 22);
+            this.m_numericUpDownCh0.TabIndex = 1;
+            this.m_numericUpDownCh0.ValueChanged += new System.EventHandler(this.m_numericUpDownCh0_ValueChanged);
             // 
             // groupBox2
             // 
@@ -487,8 +626,10 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox.ResumeLayout(false);
@@ -496,8 +637,8 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_trackBarCh0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_numericUpDownCh0)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -519,8 +660,8 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.TrackBar trackBar4;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.TrackBar m_trackBarCh0;
+        private System.Windows.Forms.NumericUpDown m_numericUpDownCh0;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button m_btnConnect;
         private System.Windows.Forms.ComboBox m_comboBoxPort;
@@ -543,6 +684,18 @@
         private System.Windows.Forms.NumericUpDown m_HoldingTimeCh3;
         private System.Windows.Forms.ComboBox m_comboBoxModeCh3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label8;
     }
 }
 

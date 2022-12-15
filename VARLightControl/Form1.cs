@@ -41,6 +41,9 @@ namespace VARLightControl
 
         private LCCallbackMethod pvGetCh3PwmParamsCallback = getPwmParamsCallBackCh3;
         private LCCallbackMethod pvSetCh3PwmParamsCallback = setPwmParamsCallBackCh3;
+        private LCCallbackMethod pvGetCh0PwmParamsCallback = getPwmParamsCallBackCh0;
+        private LCCallbackMethod pvSetCh0PwmParamsCallback = setPwmParamsCallBackCh0;
+      
 
         public Form1()
         {
@@ -107,6 +110,7 @@ namespace VARLightControl
             pThis.m_btnConnect.BackColor= Color.Green;
             // Get all of the information set when opened
             NativeAPI.LC_GetPwmParams(pThis.m_DevId, 0x08, pThis.pvGetCh3PwmParamsCallback);
+            NativeAPI.LC_GetPwmParams(pThis.m_DevId, 0x01, pThis.pvGetCh0PwmParamsCallback);
         }
 
         public static void closeComCallBack(LC_CALLBACK_ARG_T args)
@@ -161,22 +165,16 @@ namespace VARLightControl
                 this.m_checkBoxSwitchCh3.BackColor = Color.Red;
             }
             // TRY Trigger Logic
-            if(m_comboBoxModeCh3.SelectedItem.ToString()=="Soft Trigger")
-            {
-                //TimeSpan timeSpan = new TimeSpan();
-                //timeSpan.Milliseconds.Equals(200);
-                //if(timeSpan.Milliseconds==m_HoldingTimeCh3.Value)
-                //{
-                //    MessageBox.Show(timeSpan.ToString());
-                //}
-                NativeAPI.LC_SetPwmParams(m_DevId,
-                    0x08,
-                    (byte)this.m_comboBoxModeCh3.SelectedIndex,
-                    m_pwmValueCh3,
-                    (byte)this.m_HoldingTimeCh3.Value,
-                    m_checkBoxSwitchCh3.Checked ? (byte)0x0 : (byte)0,
-                    this.pvSetCh3PwmParamsCallback);
-            }
+            //if(m_comboBoxModeCh3.SelectedItem.ToString()=="Soft Trigger")
+            //{
+            //    NativeAPI.LC_SetPwmParams(m_DevId,
+            //        0x08,
+            //        (byte)this.m_comboBoxModeCh3.SelectedIndex,
+            //        m_pwmValueCh3,
+            //        (byte)this.m_HoldingTimeCh3.Value,
+            //        m_checkBoxSwitchCh3.Checked ? (byte)0x0 : (byte)0,
+            //        this.pvSetCh3PwmParamsCallback);
+            //}
            
         }
 
@@ -230,19 +228,65 @@ namespace VARLightControl
         }
 
         //*************************************************CHANNEL 0 ************************************************//
+        public static void getPwmParamsCallBackCh0(LC_CALLBACK_ARG_T args)
+        {
+            if (args.setPwmParamsCallbackArg.error > 0)
+            {
+                MessageBox.Show(pThis, "Set params to CH0 Error");
+            }
+        }
+
+
+        public static void setPwmParamsCallBackCh0(LC_CALLBACK_ARG_T args)
+        {
+            if (args.getPwmParamsCallbackArg.error > 0)
+            {
+                MessageBox.Show(pThis, "getPwmParamsCh0 Error");
+            }
+            else
+            {
+                pThis.m_checkBoxSwitchCh0.Checked = args.getPwmParamsCallbackArg.pwmOnOff > 0 ? true : false;
+                pThis.m_trackBarCh0.Value = args.getPwmParamsCallbackArg.pwmValue;
+                pThis.m_comboBoxModeCh0.SelectedIndex = args.getPwmParamsCallbackArg.pwmMode;
+                pThis.m_HoldingTimeCh0.Value = args.getPwmParamsCallbackArg.pwmHoldingTime;
+            }
+        }
         private void m_btnReadCh0_Click(object sender, EventArgs e)
         {
-
+            NativeAPI.LC_GetPwmParams(m_DevId, 0x01, this.pvGetCh0PwmParamsCallback);
         }
 
         private void m_btnWriteCh0_Click(object sender, EventArgs e)
         {
-
+            NativeAPI.LC_SetPwmParams(m_DevId,
+                   0x01,
+                   (byte)this.m_comboBoxModeCh0.SelectedIndex,
+                   m_pwmValueCh0,
+                   (byte)this.m_HoldingTimeCh0.Value,
+                   m_checkBoxSwitchCh0.Checked ? (byte)0x01 : (byte)0,
+                   this.pvSetCh3PwmParamsCallback);
         }
 
         private void m_checkBoxSwitchCh0_CheckedChanged(object sender, EventArgs e)
         {
-
+            NativeAPI.LC_SetPwmParams(m_DevId,
+                    0x01,
+                    (byte)this.m_comboBoxModeCh0.SelectedIndex,
+                    m_pwmValueCh3,
+                    (byte)this.m_HoldingTimeCh0.Value,
+                    m_checkBoxSwitchCh0.Checked ? (byte)0x01 : (byte)0,
+                    this.pvSetCh3PwmParamsCallback);
+            //Check ON OFF State and Change Text
+            if (m_checkBoxSwitchCh0.Checked)
+            {
+                this.m_checkBoxSwitchCh0.Text = "ON";
+                this.m_checkBoxSwitchCh0.BackColor = Color.Green;
+            }
+            else
+            {
+                this.m_checkBoxSwitchCh0.Text = "OFF";
+                this.m_checkBoxSwitchCh0.BackColor = Color.Red;
+            }
         }
 
         private void m_HoldingTimeCh0_ValueChanged(object sender, EventArgs e)
@@ -250,9 +294,28 @@ namespace VARLightControl
 
         }
 
-        private void m_trackBarCh0(object sender, EventArgs e)
+        private void m_trackBarCh0_ValueChanged(object sender, EventArgs e)
         {
+            m_pwmValueCh0 = (Byte)this.m_trackBarCh0.Value;
+            this.m_numericUpDownCh0.Value = m_pwmValueCh0;
 
+            if (m_checkBoxSwitchCh0.Checked)
+            {
+                NativeAPI.LC_SetPwmParams(m_DevId,
+                    0x01,
+                    (byte)this.m_comboBoxModeCh0.SelectedIndex,
+                    m_pwmValueCh0,
+                    (byte)this.m_HoldingTimeCh0.Value,
+                    1,
+                    this.pvSetCh3PwmParamsCallback);
+
+            }
+        }
+
+        private void m_numericUpDownCh0_ValueChanged(object sender, EventArgs e)
+        {
+            m_pwmValueCh0 = (Byte)this.m_numericUpDownCh0.Value;
+            this.m_trackBarCh0.Value = m_pwmValueCh0;
         }
     }
 }
