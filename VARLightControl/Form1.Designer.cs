@@ -32,6 +32,11 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.m_lblFirmwareVer = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.m_lblHardwareVer = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.m_checkBoxSwitchCh3 = new System.Windows.Forms.CheckBox();
@@ -54,14 +59,14 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.m_checkBoxSwitchCh1 = new System.Windows.Forms.CheckBox();
+            this.m_btnWriteCh1 = new System.Windows.Forms.Button();
+            this.m_btnReadCh1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.m_HoldingTimeCh1 = new System.Windows.Forms.NumericUpDown();
+            this.m_trackBarCh1 = new System.Windows.Forms.TrackBar();
+            this.m_comboBoxModeCh1 = new System.Windows.Forms.ComboBox();
+            this.m_numericUpDownCh1 = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -81,6 +86,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_trackBarCh3)).BeginInit();
@@ -91,9 +97,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_trackBarCh1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_numericUpDownCh1)).BeginInit();
             this.groupBox.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh0)).BeginInit();
@@ -113,12 +119,13 @@
             this.tabControl1.Location = new System.Drawing.Point(1, -3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1093, 724);
+            this.tabControl1.Size = new System.Drawing.Size(1089, 759);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -127,9 +134,56 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1085, 695);
+            this.tabPage1.Size = new System.Drawing.Size(1081, 730);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Light Control";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.m_lblFirmwareVer);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.m_lblHardwareVer);
+            this.panel1.Controls.Add(this.label);
+            this.panel1.Location = new System.Drawing.Point(7, 664);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1040, 45);
+            this.panel1.TabIndex = 6;
+            // 
+            // m_lblFirmwareVer
+            // 
+            this.m_lblFirmwareVer.AutoSize = true;
+            this.m_lblFirmwareVer.Location = new System.Drawing.Point(377, 15);
+            this.m_lblFirmwareVer.Name = "m_lblFirmwareVer";
+            this.m_lblFirmwareVer.Size = new System.Drawing.Size(34, 16);
+            this.m_lblFirmwareVer.TabIndex = 0;
+            this.m_lblFirmwareVer.Text = "0.0.0";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(224, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 16);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "FirmwareVer";
+            // 
+            // m_lblHardwareVer
+            // 
+            this.m_lblHardwareVer.AutoSize = true;
+            this.m_lblHardwareVer.Location = new System.Drawing.Point(152, 15);
+            this.m_lblHardwareVer.Name = "m_lblHardwareVer";
+            this.m_lblHardwareVer.Size = new System.Drawing.Size(34, 16);
+            this.m_lblHardwareVer.TabIndex = 0;
+            this.m_lblHardwareVer.Text = "0.0.0";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(28, 15);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(87, 16);
+            this.label.TabIndex = 0;
+            this.label.Text = "HardwareVer";
             // 
             // groupBox4
             // 
@@ -229,9 +283,10 @@
             // 
             this.m_comboBoxModeCh3.FormattingEnabled = true;
             this.m_comboBoxModeCh3.Items.AddRange(new object[] {
-            "Soft Trigger",
+            "Soft-switch",
             "Hard Switch",
-            "Raising Edge"});
+            "Hard Trigger",
+            "Soft Trigger"});
             this.m_comboBoxModeCh3.Location = new System.Drawing.Point(54, 91);
             this.m_comboBoxModeCh3.Name = "m_comboBoxModeCh3";
             this.m_comboBoxModeCh3.Size = new System.Drawing.Size(159, 24);
@@ -345,14 +400,14 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.m_checkBoxSwitchCh1);
+            this.groupBox1.Controls.Add(this.m_btnWriteCh1);
+            this.groupBox1.Controls.Add(this.m_btnReadCh1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.numericUpDown3);
-            this.groupBox1.Controls.Add(this.trackBar1);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.m_HoldingTimeCh1);
+            this.groupBox1.Controls.Add(this.m_trackBarCh1);
+            this.groupBox1.Controls.Add(this.m_comboBoxModeCh1);
+            this.groupBox1.Controls.Add(this.m_numericUpDownCh1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(7, 233);
             this.groupBox1.Name = "groupBox1";
@@ -361,36 +416,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CH1";
             // 
-            // checkBox1
+            // m_checkBoxSwitchCh1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(802, 57);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(55, 20);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "OFF";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.m_checkBoxSwitchCh0_CheckedChanged);
+            this.m_checkBoxSwitchCh1.AutoSize = true;
+            this.m_checkBoxSwitchCh1.Location = new System.Drawing.Point(802, 57);
+            this.m_checkBoxSwitchCh1.Name = "m_checkBoxSwitchCh1";
+            this.m_checkBoxSwitchCh1.Size = new System.Drawing.Size(55, 20);
+            this.m_checkBoxSwitchCh1.TabIndex = 0;
+            this.m_checkBoxSwitchCh1.Text = "OFF";
+            this.m_checkBoxSwitchCh1.UseVisualStyleBackColor = true;
+            this.m_checkBoxSwitchCh1.CheckedChanged += new System.EventHandler(this.m_checkBoxSwitchCh1_CheckedChanged);
             // 
-            // button2
+            // m_btnWriteCh1
             // 
-            this.button2.Location = new System.Drawing.Point(674, 88);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Write";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.m_btnWriteCh0_Click);
+            this.m_btnWriteCh1.Location = new System.Drawing.Point(674, 88);
+            this.m_btnWriteCh1.Name = "m_btnWriteCh1";
+            this.m_btnWriteCh1.Size = new System.Drawing.Size(86, 30);
+            this.m_btnWriteCh1.TabIndex = 6;
+            this.m_btnWriteCh1.Text = "Write";
+            this.m_btnWriteCh1.UseVisualStyleBackColor = true;
+            this.m_btnWriteCh1.Click += new System.EventHandler(this.m_btnWriteCh1_Click);
             // 
-            // button1
+            // m_btnReadCh1
             // 
-            this.button1.Location = new System.Drawing.Point(554, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Read";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.m_btnReadCh0_Click);
+            this.m_btnReadCh1.Location = new System.Drawing.Point(554, 87);
+            this.m_btnReadCh1.Name = "m_btnReadCh1";
+            this.m_btnReadCh1.Size = new System.Drawing.Size(86, 30);
+            this.m_btnReadCh1.TabIndex = 6;
+            this.m_btnReadCh1.Text = "Read";
+            this.m_btnReadCh1.UseVisualStyleBackColor = true;
+            this.m_btnReadCh1.Click += new System.EventHandler(this.m_btnReadCh1_Click);
             // 
             // label3
             // 
@@ -401,35 +456,37 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Mode";
             // 
-            // numericUpDown3
+            // m_HoldingTimeCh1
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(313, 95);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown3.TabIndex = 5;
-            this.numericUpDown3.ValueChanged += new System.EventHandler(this.m_HoldingTimeCh0_ValueChanged);
+            this.m_HoldingTimeCh1.Location = new System.Drawing.Point(313, 95);
+            this.m_HoldingTimeCh1.Name = "m_HoldingTimeCh1";
+            this.m_HoldingTimeCh1.Size = new System.Drawing.Size(120, 22);
+            this.m_HoldingTimeCh1.TabIndex = 5;
+            this.m_HoldingTimeCh1.ValueChanged += new System.EventHandler(this.m_HoldingTimeCh0_ValueChanged);
             // 
-            // trackBar1
+            // m_trackBarCh1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(6, 21);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(652, 56);
-            this.trackBar1.TabIndex = 2;
+            this.m_trackBarCh1.Location = new System.Drawing.Point(6, 21);
+            this.m_trackBarCh1.Name = "m_trackBarCh1";
+            this.m_trackBarCh1.Size = new System.Drawing.Size(652, 56);
+            this.m_trackBarCh1.TabIndex = 2;
+            this.m_trackBarCh1.ValueChanged += new System.EventHandler(this.m_trackBarCh1_ValueChanged);
             // 
-            // comboBox1
+            // m_comboBoxModeCh1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(54, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 24);
-            this.comboBox1.TabIndex = 4;
+            this.m_comboBoxModeCh1.FormattingEnabled = true;
+            this.m_comboBoxModeCh1.Location = new System.Drawing.Point(54, 92);
+            this.m_comboBoxModeCh1.Name = "m_comboBoxModeCh1";
+            this.m_comboBoxModeCh1.Size = new System.Drawing.Size(159, 24);
+            this.m_comboBoxModeCh1.TabIndex = 4;
             // 
-            // numericUpDown1
+            // m_numericUpDownCh1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(674, 21);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(82, 22);
-            this.numericUpDown1.TabIndex = 1;
+            this.m_numericUpDownCh1.Location = new System.Drawing.Point(674, 21);
+            this.m_numericUpDownCh1.Name = "m_numericUpDownCh1";
+            this.m_numericUpDownCh1.Size = new System.Drawing.Size(82, 22);
+            this.m_numericUpDownCh1.TabIndex = 1;
+            this.m_numericUpDownCh1.ValueChanged += new System.EventHandler(this.m_numericUpDownCh1_ValueChanged);
             // 
             // label8
             // 
@@ -600,7 +657,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1085, 695);
+            this.tabPage2.Size = new System.Drawing.Size(1081, 730);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -609,12 +666,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 722);
+            this.ClientSize = new System.Drawing.Size(1105, 763);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -629,9 +688,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_trackBarCh1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_numericUpDownCh1)).EndInit();
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -657,8 +716,8 @@
         private System.Windows.Forms.TrackBar trackBar3;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TrackBar m_trackBarCh1;
+        private System.Windows.Forms.NumericUpDown m_numericUpDownCh1;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.TrackBar m_trackBarCh0;
         private System.Windows.Forms.NumericUpDown m_numericUpDownCh0;
@@ -690,12 +749,17 @@
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox m_checkBoxSwitchCh1;
+        private System.Windows.Forms.Button m_btnWriteCh1;
+        private System.Windows.Forms.Button m_btnReadCh1;
+        private System.Windows.Forms.NumericUpDown m_HoldingTimeCh1;
+        private System.Windows.Forms.ComboBox m_comboBoxModeCh1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label m_lblFirmwareVer;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label m_lblHardwareVer;
+        private System.Windows.Forms.Label label;
     }
 }
 

@@ -46,7 +46,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.623549F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.37645F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 2);
@@ -66,9 +66,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(43, 0);
+            this.label1.Location = new System.Drawing.Point(42, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(420, 30);
+            this.label1.Size = new System.Drawing.Size(417, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "NP-61xx Series";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,18 +78,18 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.91304F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.08696F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.comboBox1, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(43, 32);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(42, 32);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(420, 136);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(417, 136);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label2
@@ -99,7 +99,7 @@
             this.label2.Font = new System.Drawing.Font("SimSun", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(3, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 35);
+            this.label2.Size = new System.Drawing.Size(99, 35);
             this.label2.TabIndex = 0;
             this.label2.Text = "Product: ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,10 +109,10 @@
             this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox1.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(110, 37);
+            this.comboBox1.Location = new System.Drawing.Point(108, 37);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(259, 33);
+            this.comboBox1.Size = new System.Drawing.Size(254, 33);
             this.comboBox1.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -124,13 +124,14 @@
             this.tableLayoutPanel3.Controls.Add(this.m_btnExit, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.m_btnAccept, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(43, 172);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(42, 172);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(420, 53);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(417, 53);
             this.tableLayoutPanel3.TabIndex = 2;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // m_btnExit
             // 
@@ -149,7 +150,7 @@
             // 
             this.m_btnAccept.Dock = System.Windows.Forms.DockStyle.Fill;
             this.m_btnAccept.Font = new System.Drawing.Font("SimSun", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.m_btnAccept.Location = new System.Drawing.Point(283, 2);
+            this.m_btnAccept.Location = new System.Drawing.Point(280, 2);
             this.m_btnAccept.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.m_btnAccept.Name = "m_btnAccept";
             this.m_btnAccept.Size = new System.Drawing.Size(134, 49);

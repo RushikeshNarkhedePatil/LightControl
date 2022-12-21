@@ -9,7 +9,7 @@ namespace VARLightControl
 {
     public struct OPENCOM_CALLBACK_ARG_T
     {
-        public UInt16 portNum;
+        public UInt16 portNum;          //port number
         public Byte devId;
         public Byte hardwareMajorVer;
         public Byte hardwareMinorVer;
@@ -36,15 +36,15 @@ namespace VARLightControl
 
     public struct GET_DEVICE_VER_CALLBACK_ARG_T
     {
-        public Byte hardwareMajorVer;
-        public Byte hardwareMinorVer;
-        public Byte hardwareRevVer;
+        public Byte hardwareMajorVer;   // hardware major version
+        public Byte hardwareMinorVer;   // hardware minor version
+        public Byte hardwareRevVer;     // hardware reversion 
         public Byte firmwareMajorVer;
         public Byte firmwareMinorVer;
         public Byte firmwareRevVer;
         public Byte fill_up;
-        public Byte error;
-        public UInt32 errorId;
+        public Byte error;              // error flag, 0: no error, 1: error happened
+        public UInt32 errorId;          // the error ID when the error happened
         public UInt32 fill_up_2;
     }
 
@@ -130,8 +130,6 @@ namespace VARLightControl
 
     public static class NativeAPI
     {
-
-
 
         // Library
         [DllImport("NKIOLCLIBx64.dll", EntryPoint = "DIOLC_LibraryBaseInit", SetLastError = true, CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]

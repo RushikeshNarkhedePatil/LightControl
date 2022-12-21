@@ -81,7 +81,7 @@ namespace VARLightControl
         }
 
 
-        public static List<string> ReadSections(string iniFilename)
+        public static List<string> ReadSections(string iniFilename)     // Accept ini file as a string
         {
             List<string> result = new List<string>();
             Byte[] buf = new Byte[65536];

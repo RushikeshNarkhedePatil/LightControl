@@ -19,8 +19,8 @@ namespace VARLightControl
         public LoginForm()
         {
             InitializeComponent();
-            configFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.ini");//Created in the current program path
-            selectFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "select.ini");
+            configFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.ini"); //Store all Model name and Config path info
+            selectFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "select.ini"); //store selected file info inside selectedFilePath
 
             List<string> stringList = INIHelper.ReadSections(configFilePath);
             this.comboBox1.DataSource = stringList;
@@ -42,6 +42,11 @@ namespace VARLightControl
             INIHelper.Write("SELECTED", "ConfigPath", selectCfgPath, selectFilePath);
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
