@@ -49,14 +49,14 @@
             this.m_comboBoxModeCh3 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxSwitchCh2 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.m_btnWriteCh2 = new System.Windows.Forms.Button();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
-            this.button3 = new System.Windows.Forms.Button();
+            this.m_btnReadCh2 = new System.Windows.Forms.Button();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.m_HoldingTimeCh2 = new System.Windows.Forms.NumericUpDown();
+            this.m_comboBoxModeCh2 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.m_checkBoxSwitchCh1 = new System.Windows.Forms.CheckBox();
@@ -95,7 +95,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_trackBarCh1)).BeginInit();
@@ -282,11 +282,6 @@
             // m_comboBoxModeCh3
             // 
             this.m_comboBoxModeCh3.FormattingEnabled = true;
-            this.m_comboBoxModeCh3.Items.AddRange(new object[] {
-            "Soft-switch",
-            "Hard Switch",
-            "Hard Trigger",
-            "Soft Trigger"});
             this.m_comboBoxModeCh3.Location = new System.Drawing.Point(54, 91);
             this.m_comboBoxModeCh3.Name = "m_comboBoxModeCh3";
             this.m_comboBoxModeCh3.Size = new System.Drawing.Size(159, 24);
@@ -303,14 +298,14 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.checkBox2);
+            this.groupBox3.Controls.Add(this.m_checkBoxSwitchCh2);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.m_btnWriteCh2);
             this.groupBox3.Controls.Add(this.trackBar3);
-            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.m_btnReadCh2);
             this.groupBox3.Controls.Add(this.numericUpDown2);
-            this.groupBox3.Controls.Add(this.numericUpDown4);
-            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.m_HoldingTimeCh2);
+            this.groupBox3.Controls.Add(this.m_comboBoxModeCh2);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Location = new System.Drawing.Point(7, 381);
             this.groupBox3.Name = "groupBox3";
@@ -319,16 +314,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "CH2";
             // 
-            // checkBox2
+            // m_checkBoxSwitchCh2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(799, 66);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(55, 20);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "OFF";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.m_checkBoxSwitchCh0_CheckedChanged);
+            this.m_checkBoxSwitchCh2.AutoSize = true;
+            this.m_checkBoxSwitchCh2.Location = new System.Drawing.Point(799, 66);
+            this.m_checkBoxSwitchCh2.Name = "m_checkBoxSwitchCh2";
+            this.m_checkBoxSwitchCh2.Size = new System.Drawing.Size(55, 20);
+            this.m_checkBoxSwitchCh2.TabIndex = 0;
+            this.m_checkBoxSwitchCh2.Text = "OFF";
+            this.m_checkBoxSwitchCh2.UseVisualStyleBackColor = true;
+            this.m_checkBoxSwitchCh2.CheckedChanged += new System.EventHandler(this.m_checkBoxSwitchCh2_CheckedChanged);
             // 
             // label5
             // 
@@ -339,15 +334,15 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Mode";
             // 
-            // button4
+            // m_btnWriteCh2
             // 
-            this.button4.Location = new System.Drawing.Point(674, 93);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 30);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Write";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.m_btnWriteCh0_Click);
+            this.m_btnWriteCh2.Location = new System.Drawing.Point(674, 93);
+            this.m_btnWriteCh2.Name = "m_btnWriteCh2";
+            this.m_btnWriteCh2.Size = new System.Drawing.Size(86, 30);
+            this.m_btnWriteCh2.TabIndex = 6;
+            this.m_btnWriteCh2.Text = "Write";
+            this.m_btnWriteCh2.UseVisualStyleBackColor = true;
+            this.m_btnWriteCh2.Click += new System.EventHandler(this.m_btnWriteCh0_Click);
             // 
             // trackBar3
             // 
@@ -356,15 +351,15 @@
             this.trackBar3.Size = new System.Drawing.Size(652, 56);
             this.trackBar3.TabIndex = 2;
             // 
-            // button3
+            // m_btnReadCh2
             // 
-            this.button3.Location = new System.Drawing.Point(554, 93);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 30);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Read";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.m_btnReadCh0_Click);
+            this.m_btnReadCh2.Location = new System.Drawing.Point(554, 93);
+            this.m_btnReadCh2.Name = "m_btnReadCh2";
+            this.m_btnReadCh2.Size = new System.Drawing.Size(86, 30);
+            this.m_btnReadCh2.TabIndex = 6;
+            this.m_btnReadCh2.Text = "Read";
+            this.m_btnReadCh2.UseVisualStyleBackColor = true;
+            this.m_btnReadCh2.Click += new System.EventHandler(this.m_btnReadCh0_Click);
             // 
             // numericUpDown2
             // 
@@ -373,21 +368,21 @@
             this.numericUpDown2.Size = new System.Drawing.Size(82, 22);
             this.numericUpDown2.TabIndex = 1;
             // 
-            // numericUpDown4
+            // m_HoldingTimeCh2
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(313, 101);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown4.TabIndex = 5;
-            this.numericUpDown4.ValueChanged += new System.EventHandler(this.m_HoldingTimeCh0_ValueChanged);
+            this.m_HoldingTimeCh2.Location = new System.Drawing.Point(313, 101);
+            this.m_HoldingTimeCh2.Name = "m_HoldingTimeCh2";
+            this.m_HoldingTimeCh2.Size = new System.Drawing.Size(120, 22);
+            this.m_HoldingTimeCh2.TabIndex = 5;
+            this.m_HoldingTimeCh2.ValueChanged += new System.EventHandler(this.m_HoldingTimeCh0_ValueChanged);
             // 
-            // comboBox2
+            // m_comboBoxModeCh2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(54, 98);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 24);
-            this.comboBox2.TabIndex = 4;
+            this.m_comboBoxModeCh2.FormattingEnabled = true;
+            this.m_comboBoxModeCh2.Location = new System.Drawing.Point(54, 98);
+            this.m_comboBoxModeCh2.Name = "m_comboBoxModeCh2";
+            this.m_comboBoxModeCh2.Size = new System.Drawing.Size(159, 24);
+            this.m_comboBoxModeCh2.TabIndex = 4;
             // 
             // label9
             // 
@@ -685,7 +680,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_HoldingTimeCh1)).EndInit();
@@ -743,11 +738,11 @@
         private System.Windows.Forms.NumericUpDown m_HoldingTimeCh3;
         private System.Windows.Forms.ComboBox m_comboBoxModeCh3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.CheckBox m_checkBoxSwitchCh2;
+        private System.Windows.Forms.Button m_btnWriteCh2;
+        private System.Windows.Forms.Button m_btnReadCh2;
+        private System.Windows.Forms.NumericUpDown m_HoldingTimeCh2;
+        private System.Windows.Forms.ComboBox m_comboBoxModeCh2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox m_checkBoxSwitchCh1;
         private System.Windows.Forms.Button m_btnWriteCh1;

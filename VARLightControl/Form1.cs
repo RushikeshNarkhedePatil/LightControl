@@ -66,7 +66,7 @@ namespace VARLightControl
         {
             InitializeComponent();
             pThis = this;
-            this.m_comboBoxModeCh3.SelectedIndex = 0;
+            //this.m_comboBoxModeCh3.SelectedIndex = 0;
 
             this.m_comboBoxPort.Items.Add("COM3");      // Add ComboBox Item Value
             this.m_comboBoxPort.SelectedItem = "COM3";  
@@ -88,14 +88,19 @@ namespace VARLightControl
             this.timer1.Enabled = true;
 
             // Software Mode
-            //adding elements using collection-initializer syntax
-            //var Mode = new List<string>() // trigger mode, 0:Soft-switch, 1: hardware-switch, 2: Raising-Edge, 3: Soft - trigger
-            //{
-            //     "Soft-switch",
-            //     "hardware-switch",
-            //     "hard-trigger",
-            //     "Soft-trigger"
-            //};
+            //adding Software Mode values
+            var Mode = new List<string>() // trigger mode, 0:Soft-switch, 1: hardware-switch, 2: Raising-Edge, 3: Soft - trigger
+            {
+                 "Soft Switch",
+                 "Hardware Switch",
+                 "Hard Trigger",
+                 "Soft Trigger"
+            };
+            // Add Software Mode value inside ComboBox
+            m_comboBoxModeCh3.Items.AddRange(Mode.ToArray());
+            m_comboBoxModeCh0.Items.AddRange(Mode.ToArray());
+            m_comboBoxModeCh1.Items.AddRange(Mode.ToArray());
+            m_comboBoxModeCh2.Items.AddRange(Mode.ToArray());
 
         }
 
@@ -217,22 +222,9 @@ namespace VARLightControl
                 this.m_checkBoxSwitchCh3.Text = "OFF";
                 this.m_checkBoxSwitchCh3.BackColor = Color.Red;
             }
-            // TRY Trigger Logic
-            //if(m_comboBoxModeCh3.SelectedItem.ToString()=="Soft Trigger")
-            //{
-            //    NativeAPI.LC_SetPwmParams(m_DevId,
-            //        0x08,
-            //        (byte)this.m_comboBoxModeCh3.SelectedIndex,
-            //        m_pwmValueCh3,
-            //        (byte)this.m_HoldingTimeCh3.Value,
-            //        m_checkBoxSwitchCh3.Checked ? (byte)0x0 : (byte)0,
-            //        this.pvSetCh3PwmParamsCallback);
-            //}
-            
 
         }
 
-        
 
         private void m_trackBarCh3_ValueChanged(object sender, EventArgs e)
         {
@@ -451,6 +443,13 @@ namespace VARLightControl
                 pThis.m_comboBoxModeCh1.SelectedIndex = args.getPwmParamsCallbackArg.pwmMode;
                 pThis.m_HoldingTimeCh1.Value = args.getPwmParamsCallbackArg.pwmHoldingTime;
             }
+        }
+
+        //*************************************************CHANNEL 2 ************************************************//
+
+        private void m_checkBoxSwitchCh2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
