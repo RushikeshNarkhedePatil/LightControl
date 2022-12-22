@@ -95,7 +95,7 @@ namespace VARLightControl
             {
                  "Soft Switch",
                  "Hardware Switch",
-                 "Hard Trigger",
+                 "External Trigger",
                  "Soft Trigger"
             };
             // Add Software Mode value inside ComboBox
@@ -139,7 +139,7 @@ namespace VARLightControl
             isOpen = NativeAPI.DIOLC_IsDeviceOpened(m_comPort, m_DevId);      //check is open or not 0 is success and 1 is error or not connected.
             if (isOpen == 0)
             {
-                // Channel 0
+                // Channel 0 Enabled Values
                 m_comboBoxModeCh0.Enabled = true;
                 m_HoldingTimeCh0.Enabled = true;
                 m_numericUpDownCh0.Enabled = true;
@@ -147,7 +147,7 @@ namespace VARLightControl
                 m_checkBoxSwitchCh0.Enabled = true;
                 m_btnReadCh0.Enabled = true;
                 m_btnWriteCh0.Enabled = true;
-                // Channel 1
+                // Channel 1 Enabled Values
                 m_comboBoxModeCh1.Enabled = true;
                 m_HoldingTimeCh1.Enabled = true;
                 m_numericUpDownCh1.Enabled = true;
@@ -155,7 +155,7 @@ namespace VARLightControl
                 m_checkBoxSwitchCh1.Enabled = true;
                 m_btnReadCh1.Enabled = true;
                 m_btnWriteCh1.Enabled = true;
-                // Channel 2
+                // Channel 2 Enabled Values
                 m_comboBoxModeCh2.Enabled = true;
                 m_HoldingTimeCh2.Enabled = true;
                 m_numericUpDownCh2.Enabled = true;
@@ -163,7 +163,7 @@ namespace VARLightControl
                 m_checkBoxSwitchCh2.Enabled = true;
                 m_btnReadCh2.Enabled = true;
                 m_btnWriteCh2.Enabled = true;
-                // Channel 3
+                // Channel 3 Enabled Values
                 m_comboBoxModeCh3.Enabled= true;
                 m_HoldingTimeCh3.Enabled= true;
                 m_numericUpDownCh3.Enabled= true;
@@ -604,6 +604,16 @@ namespace VARLightControl
                     this.pvSetCh2PwmParamsCallback);
 
             }
+        }
+
+        private void m_checkBoxDO_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void m_checkBoxStartDoTest_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
