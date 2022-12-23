@@ -27,6 +27,7 @@ namespace VARLightControl
         private Byte m_diValueL = 0;
         private int isOpen=0;       // check device open or not 
 
+        // Light Control Values
         private UInt16 m_comPort = 3;
         private Int32 m_comPortOpenFlag = 0;
         private Byte m_DevId = 0x01;
@@ -606,14 +607,45 @@ namespace VARLightControl
             }
         }
 
-        private void m_checkBoxDO_CheckedChanged(object sender, EventArgs e)
+        private void m_checkBoxStartDoTest_CheckedChanged(object sender, EventArgs e)
         {
+            if (m_checkBoxStartDoTest.Checked)      //set values
+            {
+                m_checkBoxDO0.Checked = false;
+                m_checkBoxDO1.Checked = false;
+                m_checkBoxDO2.Checked = false;
+                m_checkBoxDO3.Checked = false;
+                m_checkBoxDO4.Checked = false;
+                m_checkBoxDO5.Checked = false;
+                m_checkBoxDO6.Checked = false;
+                m_checkBoxDO7.Checked = false;
+                m_checkBoxDO8.Checked = false;
+                m_checkBoxDO9.Checked = false;
+                m_checkBoxDO10.Checked = false;
+                m_checkBoxDO11.Checked = false;
+                m_checkBoxDO12.Checked = false;
+                m_checkBoxDO13.Checked = false;
+                m_checkBoxDO14.Checked = false;
+                m_checkBoxDO15.Checked = false;
+
+
+                m_dioTestStartFlag = 1;
+
+            }
+            else
+            {
+                m_dioTestStartFlag = 0;
+            }
 
         }
 
-        private void m_checkBoxStartDoTest_CheckedChanged(object sender, EventArgs e)
+        // Digital Output
+        private void m_checkBoxDO_CheckedChanged(object sender, EventArgs e)
         {
+            if (m_dioTestStartFlag == 1)
+            {
 
+            }
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.advLightControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.m_lblFirmwareVer = new System.Windows.Forms.Label();
@@ -84,46 +84,67 @@
             this.m_comboBoxPort = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.m_checkBoxDO0 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO1 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO2 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO3 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO4 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO5 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO8 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO9 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO10 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO11 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO12 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO13 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO14 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO15 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO6 = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxDO7 = new System.Windows.Forms.CheckBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.m_lblDI0 = new System.Windows.Forms.Label();
+            this.m_lblDI1 = new System.Windows.Forms.Label();
+            this.m_lblDI2 = new System.Windows.Forms.Label();
+            this.m_lblDI3 = new System.Windows.Forms.Label();
+            this.m_lblDI4 = new System.Windows.Forms.Label();
+            this.m_lblDI5 = new System.Windows.Forms.Label();
+            this.m_lblDI8 = new System.Windows.Forms.Label();
+            this.m_lblDI9 = new System.Windows.Forms.Label();
+            this.m_lblDI10 = new System.Windows.Forms.Label();
+            this.m_lblDI11 = new System.Windows.Forms.Label();
+            this.m_lblDI12 = new System.Windows.Forms.Label();
+            this.m_lblDI13 = new System.Windows.Forms.Label();
+            this.m_lblDI14 = new System.Windows.Forms.Label();
+            this.m_lblDI15 = new System.Windows.Forms.Label();
+            this.m_lblDI7 = new System.Windows.Forms.Label();
+            this.m_lblDI6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.m_checkBoxStartDoTest = new System.Windows.Forms.CheckBox();
-            this.m_lblDI0 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.m_checkBoxDO0 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.tabControl1.SuspendLayout();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.m_advReadCH0 = new System.Windows.Forms.Button();
+            this.m_advWriteCH0 = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.m_advWriteCH1 = new System.Windows.Forms.Button();
+            this.m_advReadCH1 = new System.Windows.Forms.Button();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.m_advWriteCH2 = new System.Windows.Forms.Button();
+            this.m_advReadCH2 = new System.Windows.Forms.Button();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.m_advWriteCH3 = new System.Windows.Forms.Button();
+            this.m_advReadCH3 = new System.Windows.Forms.Button();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.m_advHoldTimeCH0 = new System.Windows.Forms.ComboBox();
+            this.m_advHoldTimeCH1 = new System.Windows.Forms.ComboBox();
+            this.m_advHoldTimeCH2 = new System.Windows.Forms.ComboBox();
+            this.m_advHoldTimeCH3 = new System.Windows.Forms.ComboBox();
+            this.advLightControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -146,27 +167,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_numericUpDownCh0)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // tabControl1
+            // advLightControl
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(1, -3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1089, 759);
-            this.tabControl1.TabIndex = 0;
+            this.advLightControl.Controls.Add(this.tabPage1);
+            this.advLightControl.Controls.Add(this.tabPage2);
+            this.advLightControl.Controls.Add(this.tabPage3);
+            this.advLightControl.Location = new System.Drawing.Point(1, -3);
+            this.advLightControl.Name = "advLightControl";
+            this.advLightControl.SelectedIndex = 0;
+            this.advLightControl.Size = new System.Drawing.Size(1089, 759);
+            this.advLightControl.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -741,42 +772,15 @@
             this.tabPage2.Text = "DIO_Test";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // groupBox6
             // 
-            this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.97959F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.02041F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel1.Controls.Add(this.m_lblDI0, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label15, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label16, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label17, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label18, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label19, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label20, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label21, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label22, 6, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label23, 7, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label24, 7, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label25, 6, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 21);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1009, 217);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.groupBox6.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox6.Location = new System.Drawing.Point(32, 375);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(1021, 256);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "DO";
             // 
             // tableLayoutPanel2
             // 
@@ -788,23 +792,23 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO0, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox3, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox4, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox5, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox6, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox7, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox8, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox9, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox10, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox11, 4, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox12, 5, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox13, 6, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox14, 7, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox15, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.checkBox16, 7, 0);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO3, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO4, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO5, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO8, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO9, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO10, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO11, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO12, 4, 2);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO13, 5, 2);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO14, 6, 2);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO15, 7, 2);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO6, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.m_checkBoxDO7, 7, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(9, 21);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -814,6 +818,517 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1006, 217);
             this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // m_checkBoxDO0
+            // 
+            this.m_checkBoxDO0.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO0.AutoSize = true;
+            this.m_checkBoxDO0.Location = new System.Drawing.Point(3, 3);
+            this.m_checkBoxDO0.Name = "m_checkBoxDO0";
+            this.m_checkBoxDO0.Size = new System.Drawing.Size(106, 49);
+            this.m_checkBoxDO0.TabIndex = 0;
+            this.m_checkBoxDO0.Text = "DO_0";
+            this.m_checkBoxDO0.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO0.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO1
+            // 
+            this.m_checkBoxDO1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO1.AutoSize = true;
+            this.m_checkBoxDO1.Location = new System.Drawing.Point(115, 3);
+            this.m_checkBoxDO1.Name = "m_checkBoxDO1";
+            this.m_checkBoxDO1.Size = new System.Drawing.Size(111, 49);
+            this.m_checkBoxDO1.TabIndex = 0;
+            this.m_checkBoxDO1.Text = "DO_1";
+            this.m_checkBoxDO1.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO1.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO2
+            // 
+            this.m_checkBoxDO2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO2.AutoSize = true;
+            this.m_checkBoxDO2.Location = new System.Drawing.Point(232, 3);
+            this.m_checkBoxDO2.Name = "m_checkBoxDO2";
+            this.m_checkBoxDO2.Size = new System.Drawing.Size(128, 49);
+            this.m_checkBoxDO2.TabIndex = 0;
+            this.m_checkBoxDO2.Text = "DO_2";
+            this.m_checkBoxDO2.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO2.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO3
+            // 
+            this.m_checkBoxDO3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO3.AutoSize = true;
+            this.m_checkBoxDO3.Location = new System.Drawing.Point(366, 3);
+            this.m_checkBoxDO3.Name = "m_checkBoxDO3";
+            this.m_checkBoxDO3.Size = new System.Drawing.Size(130, 49);
+            this.m_checkBoxDO3.TabIndex = 0;
+            this.m_checkBoxDO3.Text = "DO_3";
+            this.m_checkBoxDO3.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO3.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO4
+            // 
+            this.m_checkBoxDO4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO4.AutoSize = true;
+            this.m_checkBoxDO4.Location = new System.Drawing.Point(502, 3);
+            this.m_checkBoxDO4.Name = "m_checkBoxDO4";
+            this.m_checkBoxDO4.Size = new System.Drawing.Size(133, 49);
+            this.m_checkBoxDO4.TabIndex = 0;
+            this.m_checkBoxDO4.Text = "DO_4";
+            this.m_checkBoxDO4.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO4.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO5
+            // 
+            this.m_checkBoxDO5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO5.AutoSize = true;
+            this.m_checkBoxDO5.Location = new System.Drawing.Point(641, 3);
+            this.m_checkBoxDO5.Name = "m_checkBoxDO5";
+            this.m_checkBoxDO5.Size = new System.Drawing.Size(120, 49);
+            this.m_checkBoxDO5.TabIndex = 0;
+            this.m_checkBoxDO5.Text = "DO_5";
+            this.m_checkBoxDO5.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO5.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO8
+            // 
+            this.m_checkBoxDO8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO8.AutoSize = true;
+            this.m_checkBoxDO8.Location = new System.Drawing.Point(3, 113);
+            this.m_checkBoxDO8.Name = "m_checkBoxDO8";
+            this.m_checkBoxDO8.Size = new System.Drawing.Size(106, 45);
+            this.m_checkBoxDO8.TabIndex = 0;
+            this.m_checkBoxDO8.Text = "DO_8";
+            this.m_checkBoxDO8.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO8.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO9
+            // 
+            this.m_checkBoxDO9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO9.AutoSize = true;
+            this.m_checkBoxDO9.Location = new System.Drawing.Point(115, 113);
+            this.m_checkBoxDO9.Name = "m_checkBoxDO9";
+            this.m_checkBoxDO9.Size = new System.Drawing.Size(111, 45);
+            this.m_checkBoxDO9.TabIndex = 0;
+            this.m_checkBoxDO9.Text = "DO_9";
+            this.m_checkBoxDO9.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO9.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO10
+            // 
+            this.m_checkBoxDO10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO10.AutoSize = true;
+            this.m_checkBoxDO10.Location = new System.Drawing.Point(232, 113);
+            this.m_checkBoxDO10.Name = "m_checkBoxDO10";
+            this.m_checkBoxDO10.Size = new System.Drawing.Size(128, 45);
+            this.m_checkBoxDO10.TabIndex = 0;
+            this.m_checkBoxDO10.Text = "DO_10";
+            this.m_checkBoxDO10.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO10.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO11
+            // 
+            this.m_checkBoxDO11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO11.AutoSize = true;
+            this.m_checkBoxDO11.Location = new System.Drawing.Point(366, 113);
+            this.m_checkBoxDO11.Name = "m_checkBoxDO11";
+            this.m_checkBoxDO11.Size = new System.Drawing.Size(130, 45);
+            this.m_checkBoxDO11.TabIndex = 0;
+            this.m_checkBoxDO11.Text = "DO_11";
+            this.m_checkBoxDO11.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO11.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO12
+            // 
+            this.m_checkBoxDO12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO12.AutoSize = true;
+            this.m_checkBoxDO12.Location = new System.Drawing.Point(502, 113);
+            this.m_checkBoxDO12.Name = "m_checkBoxDO12";
+            this.m_checkBoxDO12.Size = new System.Drawing.Size(133, 45);
+            this.m_checkBoxDO12.TabIndex = 0;
+            this.m_checkBoxDO12.Text = "DO_12";
+            this.m_checkBoxDO12.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO12.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO13
+            // 
+            this.m_checkBoxDO13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO13.AutoSize = true;
+            this.m_checkBoxDO13.Location = new System.Drawing.Point(641, 113);
+            this.m_checkBoxDO13.Name = "m_checkBoxDO13";
+            this.m_checkBoxDO13.Size = new System.Drawing.Size(120, 45);
+            this.m_checkBoxDO13.TabIndex = 0;
+            this.m_checkBoxDO13.Text = "DO_13";
+            this.m_checkBoxDO13.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO13.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO14
+            // 
+            this.m_checkBoxDO14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO14.AutoSize = true;
+            this.m_checkBoxDO14.Location = new System.Drawing.Point(767, 113);
+            this.m_checkBoxDO14.Name = "m_checkBoxDO14";
+            this.m_checkBoxDO14.Size = new System.Drawing.Size(109, 45);
+            this.m_checkBoxDO14.TabIndex = 0;
+            this.m_checkBoxDO14.Text = "DO_14";
+            this.m_checkBoxDO14.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO14.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO15
+            // 
+            this.m_checkBoxDO15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO15.AutoSize = true;
+            this.m_checkBoxDO15.Location = new System.Drawing.Point(882, 113);
+            this.m_checkBoxDO15.Name = "m_checkBoxDO15";
+            this.m_checkBoxDO15.Size = new System.Drawing.Size(121, 45);
+            this.m_checkBoxDO15.TabIndex = 0;
+            this.m_checkBoxDO15.Text = "DO_15";
+            this.m_checkBoxDO15.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO15.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO6
+            // 
+            this.m_checkBoxDO6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO6.AutoSize = true;
+            this.m_checkBoxDO6.Location = new System.Drawing.Point(767, 3);
+            this.m_checkBoxDO6.Name = "m_checkBoxDO6";
+            this.m_checkBoxDO6.Size = new System.Drawing.Size(109, 49);
+            this.m_checkBoxDO6.TabIndex = 0;
+            this.m_checkBoxDO6.Text = "DO_6";
+            this.m_checkBoxDO6.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO6.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // m_checkBoxDO7
+            // 
+            this.m_checkBoxDO7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_checkBoxDO7.AutoSize = true;
+            this.m_checkBoxDO7.Location = new System.Drawing.Point(882, 3);
+            this.m_checkBoxDO7.Name = "m_checkBoxDO7";
+            this.m_checkBoxDO7.Size = new System.Drawing.Size(121, 49);
+            this.m_checkBoxDO7.TabIndex = 0;
+            this.m_checkBoxDO7.Text = "DO_7";
+            this.m_checkBoxDO7.UseVisualStyleBackColor = true;
+            this.m_checkBoxDO7.CheckedChanged += new System.EventHandler(this.m_checkBoxDO_CheckedChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox5.Location = new System.Drawing.Point(32, 102);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1021, 249);
+            this.groupBox5.TabIndex = 2;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "DI";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.97959F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.02041F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI0, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI2, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI3, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI4, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI5, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI8, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI9, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI10, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI11, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI12, 4, 2);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI13, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI14, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI15, 7, 2);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI7, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.m_lblDI6, 6, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 21);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1009, 217);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // m_lblDI0
+            // 
+            this.m_lblDI0.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI0.AutoSize = true;
+            this.m_lblDI0.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI0.Location = new System.Drawing.Point(3, 0);
+            this.m_lblDI0.Name = "m_lblDI0";
+            this.m_lblDI0.Size = new System.Drawing.Size(108, 55);
+            this.m_lblDI0.TabIndex = 0;
+            this.m_lblDI0.Text = "DI_0";
+            this.m_lblDI0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI1
+            // 
+            this.m_lblDI1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI1.AutoSize = true;
+            this.m_lblDI1.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI1.Location = new System.Drawing.Point(117, 0);
+            this.m_lblDI1.Name = "m_lblDI1";
+            this.m_lblDI1.Size = new System.Drawing.Size(112, 55);
+            this.m_lblDI1.TabIndex = 0;
+            this.m_lblDI1.Text = "DI_1";
+            this.m_lblDI1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI2
+            // 
+            this.m_lblDI2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI2.AutoSize = true;
+            this.m_lblDI2.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI2.Location = new System.Drawing.Point(235, 0);
+            this.m_lblDI2.Name = "m_lblDI2";
+            this.m_lblDI2.Size = new System.Drawing.Size(128, 55);
+            this.m_lblDI2.TabIndex = 0;
+            this.m_lblDI2.Text = "DI_2";
+            this.m_lblDI2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI3
+            // 
+            this.m_lblDI3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI3.AutoSize = true;
+            this.m_lblDI3.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI3.Location = new System.Drawing.Point(369, 0);
+            this.m_lblDI3.Name = "m_lblDI3";
+            this.m_lblDI3.Size = new System.Drawing.Size(130, 55);
+            this.m_lblDI3.TabIndex = 0;
+            this.m_lblDI3.Text = "DI_3";
+            this.m_lblDI3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI4
+            // 
+            this.m_lblDI4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI4.AutoSize = true;
+            this.m_lblDI4.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI4.Location = new System.Drawing.Point(505, 0);
+            this.m_lblDI4.Name = "m_lblDI4";
+            this.m_lblDI4.Size = new System.Drawing.Size(133, 55);
+            this.m_lblDI4.TabIndex = 0;
+            this.m_lblDI4.Text = "DI_4";
+            this.m_lblDI4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI5
+            // 
+            this.m_lblDI5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI5.AutoSize = true;
+            this.m_lblDI5.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI5.Location = new System.Drawing.Point(644, 0);
+            this.m_lblDI5.Name = "m_lblDI5";
+            this.m_lblDI5.Size = new System.Drawing.Size(120, 55);
+            this.m_lblDI5.TabIndex = 0;
+            this.m_lblDI5.Text = "DI_5";
+            this.m_lblDI5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI8
+            // 
+            this.m_lblDI8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI8.AutoSize = true;
+            this.m_lblDI8.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI8.Location = new System.Drawing.Point(3, 110);
+            this.m_lblDI8.Name = "m_lblDI8";
+            this.m_lblDI8.Size = new System.Drawing.Size(108, 51);
+            this.m_lblDI8.TabIndex = 0;
+            this.m_lblDI8.Text = "DI_8";
+            this.m_lblDI8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI9
+            // 
+            this.m_lblDI9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI9.AutoSize = true;
+            this.m_lblDI9.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI9.Location = new System.Drawing.Point(117, 110);
+            this.m_lblDI9.Name = "m_lblDI9";
+            this.m_lblDI9.Size = new System.Drawing.Size(112, 51);
+            this.m_lblDI9.TabIndex = 0;
+            this.m_lblDI9.Text = "DI_9";
+            this.m_lblDI9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI10
+            // 
+            this.m_lblDI10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI10.AutoSize = true;
+            this.m_lblDI10.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI10.Location = new System.Drawing.Point(235, 110);
+            this.m_lblDI10.Name = "m_lblDI10";
+            this.m_lblDI10.Size = new System.Drawing.Size(128, 51);
+            this.m_lblDI10.TabIndex = 0;
+            this.m_lblDI10.Text = "DI_10";
+            this.m_lblDI10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI11
+            // 
+            this.m_lblDI11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI11.AutoSize = true;
+            this.m_lblDI11.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI11.Location = new System.Drawing.Point(369, 110);
+            this.m_lblDI11.Name = "m_lblDI11";
+            this.m_lblDI11.Size = new System.Drawing.Size(130, 51);
+            this.m_lblDI11.TabIndex = 0;
+            this.m_lblDI11.Text = "DI_11";
+            this.m_lblDI11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI12
+            // 
+            this.m_lblDI12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI12.AutoSize = true;
+            this.m_lblDI12.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI12.Location = new System.Drawing.Point(505, 110);
+            this.m_lblDI12.Name = "m_lblDI12";
+            this.m_lblDI12.Size = new System.Drawing.Size(133, 51);
+            this.m_lblDI12.TabIndex = 0;
+            this.m_lblDI12.Text = "DI_12";
+            this.m_lblDI12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI13
+            // 
+            this.m_lblDI13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI13.AutoSize = true;
+            this.m_lblDI13.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI13.Location = new System.Drawing.Point(644, 110);
+            this.m_lblDI13.Name = "m_lblDI13";
+            this.m_lblDI13.Size = new System.Drawing.Size(120, 51);
+            this.m_lblDI13.TabIndex = 0;
+            this.m_lblDI13.Text = "DI_13";
+            this.m_lblDI13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI14
+            // 
+            this.m_lblDI14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI14.AutoSize = true;
+            this.m_lblDI14.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI14.Location = new System.Drawing.Point(770, 110);
+            this.m_lblDI14.Name = "m_lblDI14";
+            this.m_lblDI14.Size = new System.Drawing.Size(109, 51);
+            this.m_lblDI14.TabIndex = 0;
+            this.m_lblDI14.Text = "DI_14";
+            this.m_lblDI14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI15
+            // 
+            this.m_lblDI15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI15.AutoSize = true;
+            this.m_lblDI15.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI15.Location = new System.Drawing.Point(885, 110);
+            this.m_lblDI15.Name = "m_lblDI15";
+            this.m_lblDI15.Size = new System.Drawing.Size(121, 51);
+            this.m_lblDI15.TabIndex = 0;
+            this.m_lblDI15.Text = "DI_15";
+            this.m_lblDI15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI7
+            // 
+            this.m_lblDI7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI7.AutoSize = true;
+            this.m_lblDI7.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI7.Location = new System.Drawing.Point(885, 0);
+            this.m_lblDI7.Name = "m_lblDI7";
+            this.m_lblDI7.Size = new System.Drawing.Size(121, 55);
+            this.m_lblDI7.TabIndex = 0;
+            this.m_lblDI7.Text = "DI_7";
+            this.m_lblDI7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // m_lblDI6
+            // 
+            this.m_lblDI6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.m_lblDI6.AutoSize = true;
+            this.m_lblDI6.BackColor = System.Drawing.Color.Gray;
+            this.m_lblDI6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.m_lblDI6.Location = new System.Drawing.Point(770, 0);
+            this.m_lblDI6.Name = "m_lblDI6";
+            this.m_lblDI6.Size = new System.Drawing.Size(109, 55);
+            this.m_lblDI6.TabIndex = 0;
+            this.m_lblDI6.Text = "DI_6";
+            this.m_lblDI6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -840,484 +1355,223 @@
             this.m_checkBoxStartDoTest.TabIndex = 0;
             this.m_checkBoxStartDoTest.Text = "StartTest";
             this.m_checkBoxStartDoTest.UseVisualStyleBackColor = true;
-            // 
-            // m_lblDI0
-            // 
-            this.m_lblDI0.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.m_lblDI0.AutoSize = true;
-            this.m_lblDI0.BackColor = System.Drawing.Color.Gray;
-            this.m_lblDI0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.m_lblDI0.Location = new System.Drawing.Point(3, 0);
-            this.m_lblDI0.Name = "m_lblDI0";
-            this.m_lblDI0.Size = new System.Drawing.Size(108, 55);
-            this.m_lblDI0.TabIndex = 0;
-            this.m_lblDI0.Text = "DI_0";
-            this.m_lblDI0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Gray;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label10.Location = new System.Drawing.Point(117, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 55);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "DI_0";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Gray;
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label12.Location = new System.Drawing.Point(236, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(128, 55);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "DI_0";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Gray;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Location = new System.Drawing.Point(370, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 55);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "DI_0";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Gray;
-            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label14.Location = new System.Drawing.Point(506, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(133, 55);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "DI_0";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Gray;
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.Location = new System.Drawing.Point(645, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(120, 55);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "DI_0";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Gray;
-            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label16.Location = new System.Drawing.Point(3, 110);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(108, 51);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "DI_0";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Gray;
-            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label17.Location = new System.Drawing.Point(117, 110);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(113, 51);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "DI_0";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Gray;
-            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label18.Location = new System.Drawing.Point(236, 110);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(128, 51);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "DI_0";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Gray;
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label19.Location = new System.Drawing.Point(370, 110);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(130, 51);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "DI_0";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Gray;
-            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label20.Location = new System.Drawing.Point(506, 110);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(133, 51);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "DI_0";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Gray;
-            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label21.Location = new System.Drawing.Point(645, 110);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(120, 51);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "DI_0";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Gray;
-            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label22.Location = new System.Drawing.Point(771, 110);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(109, 51);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "DI_0";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Gray;
-            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label23.Location = new System.Drawing.Point(886, 110);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(120, 51);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "DI_0";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Gray;
-            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label24.Location = new System.Drawing.Point(886, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(120, 55);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "DI_0";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Gray;
-            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label25.Location = new System.Drawing.Point(771, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(109, 55);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "DI_0";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox5.Location = new System.Drawing.Point(32, 102);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1021, 249);
-            this.groupBox5.TabIndex = 2;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "DI";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox6.Location = new System.Drawing.Point(32, 375);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1021, 256);
-            this.groupBox6.TabIndex = 3;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "DO";
-            // 
-            // m_checkBoxDO0
-            // 
-            this.m_checkBoxDO0.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.m_checkBoxDO0.AutoSize = true;
-            this.m_checkBoxDO0.Location = new System.Drawing.Point(3, 3);
-            this.m_checkBoxDO0.Name = "m_checkBoxDO0";
-            this.m_checkBoxDO0.Size = new System.Drawing.Size(107, 49);
-            this.m_checkBoxDO0.TabIndex = 0;
-            this.m_checkBoxDO0.Text = "DO_0";
-            this.m_checkBoxDO0.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(116, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(111, 49);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "DO_0";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(233, 3);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(128, 49);
-            this.checkBox3.TabIndex = 0;
-            this.checkBox3.Text = "DO_0";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(367, 3);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(130, 49);
-            this.checkBox4.TabIndex = 0;
-            this.checkBox4.Text = "DO_0";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(503, 3);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(133, 49);
-            this.checkBox5.TabIndex = 0;
-            this.checkBox5.Text = "DO_0";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(642, 3);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(120, 49);
-            this.checkBox6.TabIndex = 0;
-            this.checkBox6.Text = "DO_0";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(3, 113);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(107, 45);
-            this.checkBox7.TabIndex = 0;
-            this.checkBox7.Text = "DO_0";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(116, 113);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(111, 45);
-            this.checkBox8.TabIndex = 0;
-            this.checkBox8.Text = "DO_0";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(233, 113);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(128, 45);
-            this.checkBox9.TabIndex = 0;
-            this.checkBox9.Text = "DO_0";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(367, 113);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(130, 45);
-            this.checkBox10.TabIndex = 0;
-            this.checkBox10.Text = "DO_0";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(503, 113);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(133, 45);
-            this.checkBox11.TabIndex = 0;
-            this.checkBox11.Text = "DO_0";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(642, 113);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(120, 45);
-            this.checkBox12.TabIndex = 0;
-            this.checkBox12.Text = "DO_0";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(768, 113);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(109, 45);
-            this.checkBox13.TabIndex = 0;
-            this.checkBox13.Text = "DO_0";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(883, 113);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(120, 45);
-            this.checkBox14.TabIndex = 0;
-            this.checkBox14.Text = "DO_0";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(768, 3);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(109, 49);
-            this.checkBox15.TabIndex = 0;
-            this.checkBox15.Text = "DO_0";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(883, 3);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(120, 49);
-            this.checkBox16.TabIndex = 0;
-            this.checkBox16.Text = "DO_0";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.m_checkBoxStartDoTest.CheckedChanged += new System.EventHandler(this.m_checkBoxStartDoTest_CheckedChanged);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox13);
+            this.tabPage3.Controls.Add(this.groupBox11);
+            this.tabPage3.Controls.Add(this.groupBox9);
+            this.tabPage3.Controls.Add(this.groupBox7);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1081, 730);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Setting";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.m_advWriteCH0);
+            this.groupBox7.Controls.Add(this.m_advReadCH0);
+            this.groupBox7.Controls.Add(this.groupBox8);
+            this.groupBox7.Location = new System.Drawing.Point(7, 29);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(1058, 138);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "CH0";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.m_advHoldTimeCH0);
+            this.groupBox8.Location = new System.Drawing.Point(6, 21);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(200, 100);
+            this.groupBox8.TabIndex = 0;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Holding Time Unit";
+            // 
+            // m_advReadCH0
+            // 
+            this.m_advReadCH0.Location = new System.Drawing.Point(962, 30);
+            this.m_advReadCH0.Name = "m_advReadCH0";
+            this.m_advReadCH0.Size = new System.Drawing.Size(79, 35);
+            this.m_advReadCH0.TabIndex = 1;
+            this.m_advReadCH0.Text = "Read";
+            this.m_advReadCH0.UseVisualStyleBackColor = true;
+            // 
+            // m_advWriteCH0
+            // 
+            this.m_advWriteCH0.Location = new System.Drawing.Point(962, 86);
+            this.m_advWriteCH0.Name = "m_advWriteCH0";
+            this.m_advWriteCH0.Size = new System.Drawing.Size(79, 35);
+            this.m_advWriteCH0.TabIndex = 1;
+            this.m_advWriteCH0.Text = "Write";
+            this.m_advWriteCH0.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.m_advWriteCH1);
+            this.groupBox9.Controls.Add(this.m_advReadCH1);
+            this.groupBox9.Controls.Add(this.groupBox10);
+            this.groupBox9.Location = new System.Drawing.Point(7, 186);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(1058, 138);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "CH1";
+            // 
+            // m_advWriteCH1
+            // 
+            this.m_advWriteCH1.Location = new System.Drawing.Point(962, 86);
+            this.m_advWriteCH1.Name = "m_advWriteCH1";
+            this.m_advWriteCH1.Size = new System.Drawing.Size(79, 35);
+            this.m_advWriteCH1.TabIndex = 1;
+            this.m_advWriteCH1.Text = "Write";
+            this.m_advWriteCH1.UseVisualStyleBackColor = true;
+            // 
+            // m_advReadCH1
+            // 
+            this.m_advReadCH1.Location = new System.Drawing.Point(962, 30);
+            this.m_advReadCH1.Name = "m_advReadCH1";
+            this.m_advReadCH1.Size = new System.Drawing.Size(79, 35);
+            this.m_advReadCH1.TabIndex = 1;
+            this.m_advReadCH1.Text = "Read";
+            this.m_advReadCH1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.m_advHoldTimeCH1);
+            this.groupBox10.Location = new System.Drawing.Point(6, 21);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(200, 100);
+            this.groupBox10.TabIndex = 0;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Holding Time Unit";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.m_advWriteCH2);
+            this.groupBox11.Controls.Add(this.m_advReadCH2);
+            this.groupBox11.Controls.Add(this.groupBox12);
+            this.groupBox11.Location = new System.Drawing.Point(7, 341);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(1058, 138);
+            this.groupBox11.TabIndex = 0;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "CH2";
+            // 
+            // m_advWriteCH2
+            // 
+            this.m_advWriteCH2.Location = new System.Drawing.Point(962, 86);
+            this.m_advWriteCH2.Name = "m_advWriteCH2";
+            this.m_advWriteCH2.Size = new System.Drawing.Size(79, 35);
+            this.m_advWriteCH2.TabIndex = 1;
+            this.m_advWriteCH2.Text = "Write";
+            this.m_advWriteCH2.UseVisualStyleBackColor = true;
+            // 
+            // m_advReadCH2
+            // 
+            this.m_advReadCH2.Location = new System.Drawing.Point(962, 30);
+            this.m_advReadCH2.Name = "m_advReadCH2";
+            this.m_advReadCH2.Size = new System.Drawing.Size(79, 35);
+            this.m_advReadCH2.TabIndex = 1;
+            this.m_advReadCH2.Text = "Read";
+            this.m_advReadCH2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.m_advHoldTimeCH2);
+            this.groupBox12.Location = new System.Drawing.Point(6, 21);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(200, 100);
+            this.groupBox12.TabIndex = 0;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Holding Time Unit";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.m_advWriteCH3);
+            this.groupBox13.Controls.Add(this.m_advReadCH3);
+            this.groupBox13.Controls.Add(this.groupBox14);
+            this.groupBox13.Location = new System.Drawing.Point(7, 500);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(1058, 138);
+            this.groupBox13.TabIndex = 0;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "CH3";
+            // 
+            // m_advWriteCH3
+            // 
+            this.m_advWriteCH3.Location = new System.Drawing.Point(962, 86);
+            this.m_advWriteCH3.Name = "m_advWriteCH3";
+            this.m_advWriteCH3.Size = new System.Drawing.Size(79, 35);
+            this.m_advWriteCH3.TabIndex = 1;
+            this.m_advWriteCH3.Text = "Write";
+            this.m_advWriteCH3.UseVisualStyleBackColor = true;
+            // 
+            // m_advReadCH3
+            // 
+            this.m_advReadCH3.Location = new System.Drawing.Point(962, 30);
+            this.m_advReadCH3.Name = "m_advReadCH3";
+            this.m_advReadCH3.Size = new System.Drawing.Size(79, 35);
+            this.m_advReadCH3.TabIndex = 1;
+            this.m_advReadCH3.Text = "Read";
+            this.m_advReadCH3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.m_advHoldTimeCH3);
+            this.groupBox14.Location = new System.Drawing.Point(6, 21);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(200, 100);
+            this.groupBox14.TabIndex = 0;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Holding Time Unit";
+            // 
+            // m_advHoldTimeCH0
+            // 
+            this.m_advHoldTimeCH0.FormattingEnabled = true;
+            this.m_advHoldTimeCH0.Location = new System.Drawing.Point(6, 30);
+            this.m_advHoldTimeCH0.Name = "m_advHoldTimeCH0";
+            this.m_advHoldTimeCH0.Size = new System.Drawing.Size(155, 24);
+            this.m_advHoldTimeCH0.TabIndex = 0;
+            // 
+            // m_advHoldTimeCH1
+            // 
+            this.m_advHoldTimeCH1.FormattingEnabled = true;
+            this.m_advHoldTimeCH1.Location = new System.Drawing.Point(6, 34);
+            this.m_advHoldTimeCH1.Name = "m_advHoldTimeCH1";
+            this.m_advHoldTimeCH1.Size = new System.Drawing.Size(155, 24);
+            this.m_advHoldTimeCH1.TabIndex = 0;
+            // 
+            // m_advHoldTimeCH2
+            // 
+            this.m_advHoldTimeCH2.FormattingEnabled = true;
+            this.m_advHoldTimeCH2.Location = new System.Drawing.Point(6, 31);
+            this.m_advHoldTimeCH2.Name = "m_advHoldTimeCH2";
+            this.m_advHoldTimeCH2.Size = new System.Drawing.Size(155, 24);
+            this.m_advHoldTimeCH2.TabIndex = 0;
+            // 
+            // m_advHoldTimeCH3
+            // 
+            this.m_advHoldTimeCH3.FormattingEnabled = true;
+            this.m_advHoldTimeCH3.Location = new System.Drawing.Point(6, 31);
+            this.m_advHoldTimeCH3.Name = "m_advHoldTimeCH3";
+            this.m_advHoldTimeCH3.Size = new System.Drawing.Size(155, 24);
+            this.m_advHoldTimeCH3.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 763);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.advLightControl);
             this.Name = "Form1";
             this.Text = "Test Digital Input Output";
-            this.tabControl1.ResumeLayout(false);
+            this.advLightControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1348,22 +1602,31 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl advLightControl;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -1424,38 +1687,59 @@
         private System.Windows.Forms.CheckBox m_checkBoxStartDoTest;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.CheckBox m_checkBoxDO0;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.CheckBox checkBox16;
+        private System.Windows.Forms.CheckBox m_checkBoxDO1;
+        private System.Windows.Forms.CheckBox m_checkBoxDO2;
+        private System.Windows.Forms.CheckBox m_checkBoxDO3;
+        private System.Windows.Forms.CheckBox m_checkBoxDO4;
+        private System.Windows.Forms.CheckBox m_checkBoxDO5;
+        private System.Windows.Forms.CheckBox m_checkBoxDO8;
+        private System.Windows.Forms.CheckBox m_checkBoxDO9;
+        private System.Windows.Forms.CheckBox m_checkBoxDO10;
+        private System.Windows.Forms.CheckBox m_checkBoxDO11;
+        private System.Windows.Forms.CheckBox m_checkBoxDO12;
+        private System.Windows.Forms.CheckBox m_checkBoxDO13;
+        private System.Windows.Forms.CheckBox m_checkBoxDO14;
+        private System.Windows.Forms.CheckBox m_checkBoxDO15;
+        private System.Windows.Forms.CheckBox m_checkBoxDO6;
+        private System.Windows.Forms.CheckBox m_checkBoxDO7;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label m_lblDI0;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label m_lblDI1;
+        private System.Windows.Forms.Label m_lblDI2;
+        private System.Windows.Forms.Label m_lblDI3;
+        private System.Windows.Forms.Label m_lblDI4;
+        private System.Windows.Forms.Label m_lblDI5;
+        private System.Windows.Forms.Label m_lblDI8;
+        private System.Windows.Forms.Label m_lblDI9;
+        private System.Windows.Forms.Label m_lblDI10;
+        private System.Windows.Forms.Label m_lblDI11;
+        private System.Windows.Forms.Label m_lblDI12;
+        private System.Windows.Forms.Label m_lblDI13;
+        private System.Windows.Forms.Label m_lblDI14;
+        private System.Windows.Forms.Label m_lblDI15;
+        private System.Windows.Forms.Label m_lblDI7;
+        private System.Windows.Forms.Label m_lblDI6;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Button m_advWriteCH3;
+        private System.Windows.Forms.Button m_advReadCH3;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.ComboBox m_advHoldTimeCH3;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.Button m_advWriteCH2;
+        private System.Windows.Forms.Button m_advReadCH2;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.ComboBox m_advHoldTimeCH2;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button m_advWriteCH1;
+        private System.Windows.Forms.Button m_advReadCH1;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.ComboBox m_advHoldTimeCH1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button m_advWriteCH0;
+        private System.Windows.Forms.Button m_advReadCH0;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.ComboBox m_advHoldTimeCH0;
     }
 }
 
