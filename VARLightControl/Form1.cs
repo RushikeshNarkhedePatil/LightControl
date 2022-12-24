@@ -54,21 +54,28 @@ namespace VARLightControl
         private LCCallbackMethod pvSetCh1PwmParamsCallback = setPwmParamsCallBackCh1;
         private LCCallbackMethod pvGetCh2PwmParamsCallback = getPwmParamsCallBackCh2;
         private LCCallbackMethod pvSetCh2PwmParamsCallback = setPwmParamsCallBackCh2;
+
+        // Parameter Control Callback Methods
         public static void SetGeneralParameterCallback(LC_CALLBACK_ARG_T arg)
         {
             if (arg.getGeneralParamCallbackArg.error != 0)
             {
                 MessageBox.Show(pThis, "SetGeneralParameterCallback Error");
             }
+            
         }
         public static void GetGeneralParameterCallback(LC_CALLBACK_ARG_T arg)
         {
-            //throw new NotImplementedException();
+            if (arg.getGeneralParamCallbackArg.error != 0)
+            {
+                MessageBox.Show(pThis, "SetGeneralParameterCallback Error");
+            }
         }
         public Form1()
         {
             InitializeComponent();
             pThis = this;
+            //SettingPanel.Enabled = false;   //Disabled Setting Pannel
             //this.m_comboBoxModeCh3.SelectedIndex = 0;
 
             this.m_comboBoxPort.Items.Add("COM3");      // Add ComboBox Item Value
@@ -99,6 +106,7 @@ namespace VARLightControl
                  "External Trigger",
                  "Soft Trigger"
             };
+            
             // Add Software Mode value inside ComboBox
             m_comboBoxModeCh3.Items.AddRange(Mode.ToArray());
             m_comboBoxModeCh0.Items.AddRange(Mode.ToArray());
@@ -109,6 +117,25 @@ namespace VARLightControl
             this.m_comboBoxModeCh0.SelectedIndex = 0;
             this.m_comboBoxModeCh1.SelectedIndex = 0;
             this.m_comboBoxModeCh2.SelectedIndex = 0;
+
+            // Advanced Light Control Settings Set Values.
+            var holdingTimeUnit = new List<string>()
+            {
+                "1000ms",
+                "100ms",
+                "10ms",
+                "1ms"
+            };
+            // Add Value in ComboBox
+            m_advHoldTimeCH0.Items.AddRange(holdingTimeUnit.ToArray());
+            m_advHoldTimeCH1.Items.AddRange(holdingTimeUnit.ToArray());
+            m_advHoldTimeCH2.Items.AddRange(holdingTimeUnit.ToArray());
+            m_advHoldTimeCH3.Items.AddRange(holdingTimeUnit.ToArray());
+            //Set Selected Index
+            m_advHoldTimeCH0.SelectedIndex = 0;
+            m_advHoldTimeCH1.SelectedIndex = 0;
+            m_advHoldTimeCH2.SelectedIndex = 0;
+            m_advHoldTimeCH3.SelectedIndex = 0;
         }
 
         // Create Connection 
@@ -140,73 +167,86 @@ namespace VARLightControl
             isOpen = NativeAPI.DIOLC_IsDeviceOpened(m_comPort, m_DevId);      //check is open or not 0 is success and 1 is error or not connected.
             if (isOpen == 0)
             {
-                // Channel 0 Enabled Values
-                m_comboBoxModeCh0.Enabled = true;
-                m_HoldingTimeCh0.Enabled = true;
-                m_numericUpDownCh0.Enabled = true;
-                m_trackBarCh0.Enabled = true;
-                m_checkBoxSwitchCh0.Enabled = true;
-                m_btnReadCh0.Enabled = true;
-                m_btnWriteCh0.Enabled = true;
-                // Channel 1 Enabled Values
-                m_comboBoxModeCh1.Enabled = true;
-                m_HoldingTimeCh1.Enabled = true;
-                m_numericUpDownCh1.Enabled = true;
-                m_trackBarCh1.Enabled = true;
-                m_checkBoxSwitchCh1.Enabled = true;
-                m_btnReadCh1.Enabled = true;
-                m_btnWriteCh1.Enabled = true;
-                // Channel 2 Enabled Values
-                m_comboBoxModeCh2.Enabled = true;
-                m_HoldingTimeCh2.Enabled = true;
-                m_numericUpDownCh2.Enabled = true;
-                m_trackBarCh2.Enabled = true;
-                m_checkBoxSwitchCh2.Enabled = true;
-                m_btnReadCh2.Enabled = true;
-                m_btnWriteCh2.Enabled = true;
-                // Channel 3 Enabled Values
-                m_comboBoxModeCh3.Enabled= true;
-                m_HoldingTimeCh3.Enabled= true;
-                m_numericUpDownCh3.Enabled= true;
-                m_trackBarCh3.Enabled= true;
-                m_checkBoxSwitchCh3.Enabled= true;
-                m_btnReadCh3.Enabled= true;
-                m_btnWriteCh3.Enabled= true;
+                advLightControl.Enabled= true;      // Enabled Light Control Tab Control Pannel
+                //// Channel 0 Enabled Values
+                //m_comboBoxModeCh0.Enabled = true;
+                //m_HoldingTimeCh0.Enabled = true;
+                //m_numericUpDownCh0.Enabled = true;
+                //m_trackBarCh0.Enabled = true;
+                //m_checkBoxSwitchCh0.Enabled = true;
+                //m_btnReadCh0.Enabled = true;
+                //m_btnWriteCh0.Enabled = true;
+                //// Channel 1 Enabled Values
+                //m_comboBoxModeCh1.Enabled = true;
+                //m_HoldingTimeCh1.Enabled = true;
+                //m_numericUpDownCh1.Enabled = true;
+                //m_trackBarCh1.Enabled = true;
+                //m_checkBoxSwitchCh1.Enabled = true;
+                //m_btnReadCh1.Enabled = true;
+                //m_btnWriteCh1.Enabled = true;
+                //// Channel 2 Enabled Values
+                //m_comboBoxModeCh2.Enabled = true;
+                //m_HoldingTimeCh2.Enabled = true;
+                //m_numericUpDownCh2.Enabled = true;
+                //m_trackBarCh2.Enabled = true;
+                //m_checkBoxSwitchCh2.Enabled = true;
+                //m_btnReadCh2.Enabled = true;
+                //m_btnWriteCh2.Enabled = true;
+                //// Channel 3 Enabled Values
+                //m_comboBoxModeCh3.Enabled= true;
+                //m_HoldingTimeCh3.Enabled= true;
+                //m_numericUpDownCh3.Enabled= true;
+                //m_trackBarCh3.Enabled= true;
+                //m_checkBoxSwitchCh3.Enabled= true;
+                //m_btnReadCh3.Enabled= true;
+                //m_btnWriteCh3.Enabled= true;
+
+                //// Enabled Advance Light Control Pannel.
+                //SettingPanel.Enabled = true;   //Enabled Setting Pannel
+                ////Set Holding Time Selected index
+                // m_advHoldTimeCH0.SelectedIndex = 0;
+                // m_advHoldTimeCH1.SelectedIndex = 0;
+                // m_advHoldTimeCH2.SelectedIndex = 0;
+                // m_advHoldTimeCH3.SelectedIndex = 0;
             }
             else
             {
-                // Channel 0
-                m_comboBoxModeCh0.Enabled = false;
-                m_HoldingTimeCh0.Enabled = false;
-                m_numericUpDownCh0.Enabled = false;
-                m_trackBarCh0.Enabled = false;
-                m_checkBoxSwitchCh0.Enabled = false;
-                m_btnReadCh0.Enabled = false;
-                m_btnWriteCh0.Enabled = false;
-                // Channel 1 
-                m_comboBoxModeCh1.Enabled = false;
-                m_HoldingTimeCh1.Enabled = false;
-                m_numericUpDownCh1.Enabled = false;
-                m_trackBarCh1.Enabled = false;
-                m_checkBoxSwitchCh1.Enabled = false;
-                m_btnReadCh1.Enabled = false;
-                m_btnWriteCh1.Enabled = false;
-                // Channel 2 
-                m_comboBoxModeCh2.Enabled = false;
-                m_HoldingTimeCh2.Enabled = false;
-                m_numericUpDownCh2.Enabled = false;
-                m_trackBarCh2.Enabled = false;
-                m_checkBoxSwitchCh2.Enabled = false;
-                m_btnReadCh2.Enabled = false;
-                m_btnWriteCh2.Enabled = false;
-                // Channel 3 
-                m_comboBoxModeCh3.Enabled = false;
-                m_HoldingTimeCh3.Enabled = false;
-                m_numericUpDownCh3.Enabled = false;
-                m_trackBarCh3.Enabled = false;
-                m_checkBoxSwitchCh3.Enabled = false;
-                m_btnReadCh3.Enabled = false;
-                m_btnWriteCh3.Enabled = false;
+                advLightControl.Enabled = false;      // Disabled Light Control Tab Control Pannel
+                //// Channel 0
+                //m_comboBoxModeCh0.Enabled = false;
+                //m_HoldingTimeCh0.Enabled = false;
+                //m_numericUpDownCh0.Enabled = false;
+                //m_trackBarCh0.Enabled = false;
+                //m_checkBoxSwitchCh0.Enabled = false;
+                //m_btnReadCh0.Enabled = false;
+                //m_btnWriteCh0.Enabled = false;
+                //// Channel 1 
+                //m_comboBoxModeCh1.Enabled = false;
+                //m_HoldingTimeCh1.Enabled = false;
+                //m_numericUpDownCh1.Enabled = false;
+                //m_trackBarCh1.Enabled = false;
+                //m_checkBoxSwitchCh1.Enabled = false;
+                //m_btnReadCh1.Enabled = false;
+                //m_btnWriteCh1.Enabled = false;
+                //// Channel 2 
+                //m_comboBoxModeCh2.Enabled = false;
+                //m_HoldingTimeCh2.Enabled = false;
+                //m_numericUpDownCh2.Enabled = false;
+                //m_trackBarCh2.Enabled = false;
+                //m_checkBoxSwitchCh2.Enabled = false;
+                //m_btnReadCh2.Enabled = false;
+                //m_btnWriteCh2.Enabled = false;
+                //// Channel 3 
+                //m_comboBoxModeCh3.Enabled = false;
+                //m_HoldingTimeCh3.Enabled = false;
+                //m_numericUpDownCh3.Enabled = false;
+                //m_trackBarCh3.Enabled = false;
+                //m_checkBoxSwitchCh3.Enabled = false;
+                //m_btnReadCh3.Enabled = false;
+                //m_btnWriteCh3.Enabled = false;
+
+                //// Disabled Advance Light Control Pannel.
+                //SettingPanel.Enabled = false;   //Disabled Setting Pannel
             }
         }
 
@@ -646,6 +686,99 @@ namespace VARLightControl
             {
 
             }
+        }
+
+        // Advanced Light Control Setting.
+        private void m_advReadCH0_Click(object sender, EventArgs e)
+        {
+            // Get the holding time unit of the channel 0
+            NativeAPI.DIOLC_GetGeneralParam(m_DevId, // DevId
+             10, // Parameter ID
+             1, // Parameter Length
+            pvgetGeneralParameterCallback // Operate call back
+            );
+            lblAdvHoldCH0.Text = m_advHoldTimeCH0.SelectedItem.ToString();
+        }
+
+        private void m_advWriteCH0_Click(object sender, EventArgs e)
+        {
+            // Set the holding time unit of the channel 0 to 100ms
+            NativeAPI.DIOLC_SetGeneralParam(m_DevId, // DevId
+             10, // Parameter ID
+             1, // Parameter Length
+             (Byte)this.m_advHoldTimeCH0.SelectedIndex, // Parameter Value
+            pvSetGeneralParameterCallback // Operate call back
+            );
+            lblAdvHoldCH0.Text = m_advHoldTimeCH0.SelectedItem.ToString();
+        }
+
+        private void m_advReadCH1_Click(object sender, EventArgs e)
+        {
+            // Get the holding time unit of the channel 0
+            NativeAPI.DIOLC_GetGeneralParam(m_DevId, // DevId
+             11, // Parameter ID
+             1, // Parameter Length
+            pvgetGeneralParameterCallback // Operate call back
+            );
+            lblAdvHoldCH1.Text = m_advHoldTimeCH1.SelectedItem.ToString();
+        }
+
+        private void m_advWriteCH1_Click(object sender, EventArgs e)
+        {
+            // Set the holding time unit of the channel 0 to 100ms
+            NativeAPI.DIOLC_SetGeneralParam(m_DevId, // DevId
+             11, // Parameter ID
+             1, // Parameter Length
+             (Byte)this.m_advHoldTimeCH1.SelectedIndex, // Parameter Value
+            pvSetGeneralParameterCallback // Operate call back
+            );
+            lblAdvHoldCH1.Text = m_advHoldTimeCH1.SelectedItem.ToString();
+        }
+
+        private void m_advReadCH2_Click(object sender, EventArgs e)
+        {
+            // Get the holding time unit of the channel 0
+            NativeAPI.DIOLC_GetGeneralParam(m_DevId, // DevId
+             12, // Parameter ID
+             1, // Parameter Length
+            pvgetGeneralParameterCallback // Operate call back
+            );
+            lblAdvHoldCH2.Text=m_advHoldTimeCH2.SelectedItem.ToString();
+        }
+
+        private void m_advWriteCH2_Click(object sender, EventArgs e)
+        {
+            // Set the holding time unit of the channel 0 to 100ms
+            NativeAPI.DIOLC_SetGeneralParam(m_DevId, // DevId
+             12, // Parameter ID
+             1, // Parameter Length
+             (Byte)this.m_advHoldTimeCH2.SelectedIndex, // Parameter Value
+            pvSetGeneralParameterCallback // Operate call back
+            );
+            lblAdvHoldCH2.Text = m_advHoldTimeCH2.SelectedItem.ToString();
+        }
+
+        private void m_advReadCH3_Click(object sender, EventArgs e)
+        {
+            // Get the holding time unit of the channel 0
+            NativeAPI.DIOLC_GetGeneralParam(m_DevId, // DevId
+             13, // Parameter ID
+             1, // Parameter Length
+            pvgetGeneralParameterCallback // Operate call back
+            );
+            lblAdvHoldCH3.Text = m_advHoldTimeCH3.SelectedItem.ToString();
+        }
+
+        private void m_advWriteCH3_Click(object sender, EventArgs e)
+        {
+            // Set the holding time unit of the channel 0 to 100ms
+            NativeAPI.DIOLC_SetGeneralParam(m_DevId, // DevId
+             13, // Parameter ID
+             1, // Parameter Length
+             (Byte)this.m_advHoldTimeCH3.SelectedIndex, // Parameter Value
+            pvSetGeneralParameterCallback // Operate call back
+            );
+            lblAdvHoldCH3.Text = m_advHoldTimeCH3.SelectedItem.ToString();
         }
     }
 }
