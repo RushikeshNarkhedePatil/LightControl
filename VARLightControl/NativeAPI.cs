@@ -173,6 +173,17 @@ namespace VARLightControl
             Byte ucPwmOnOff,
             LCCallbackMethod pCallBackFun);
 
+        // LC_SetPwmParamsNoRetentive The function is used to turn on/off the specified light control channel without saving the parameters.
+        
+        //[DllImport("NKIOLCLIBx64.dll", EntryPoint = "LC_SetPwmParamsNoRetentive", SetLastError = true, CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+        //public static extern Int32 LC_SetPwmParamsNoRetentive(UInt32 devId,
+        //Byte ucChIdx,
+        //Byte ucPwmMode,
+        //Byte ucPwmValue,
+        //Byte ucPwmHoldingTime,
+        //Byte ucPwmOnOff,
+        //LCCallbackMethod pCallBackFun);
+
         [DllImport("NKIOLCLIBx64.dll", EntryPoint = "LC_GetPwmParams", SetLastError = true, CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
         public static extern Int32 LC_GetPwmParams(UInt32 devId,
             Byte ucChIdx,

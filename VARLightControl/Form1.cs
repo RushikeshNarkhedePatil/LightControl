@@ -168,85 +168,11 @@ namespace VARLightControl
             if (isOpen == 0)
             {
                 advLightControl.Enabled= true;      // Enabled Light Control Tab Control Pannel
-                //// Channel 0 Enabled Values
-                //m_comboBoxModeCh0.Enabled = true;
-                //m_HoldingTimeCh0.Enabled = true;
-                //m_numericUpDownCh0.Enabled = true;
-                //m_trackBarCh0.Enabled = true;
-                //m_checkBoxSwitchCh0.Enabled = true;
-                //m_btnReadCh0.Enabled = true;
-                //m_btnWriteCh0.Enabled = true;
-                //// Channel 1 Enabled Values
-                //m_comboBoxModeCh1.Enabled = true;
-                //m_HoldingTimeCh1.Enabled = true;
-                //m_numericUpDownCh1.Enabled = true;
-                //m_trackBarCh1.Enabled = true;
-                //m_checkBoxSwitchCh1.Enabled = true;
-                //m_btnReadCh1.Enabled = true;
-                //m_btnWriteCh1.Enabled = true;
-                //// Channel 2 Enabled Values
-                //m_comboBoxModeCh2.Enabled = true;
-                //m_HoldingTimeCh2.Enabled = true;
-                //m_numericUpDownCh2.Enabled = true;
-                //m_trackBarCh2.Enabled = true;
-                //m_checkBoxSwitchCh2.Enabled = true;
-                //m_btnReadCh2.Enabled = true;
-                //m_btnWriteCh2.Enabled = true;
-                //// Channel 3 Enabled Values
-                //m_comboBoxModeCh3.Enabled= true;
-                //m_HoldingTimeCh3.Enabled= true;
-                //m_numericUpDownCh3.Enabled= true;
-                //m_trackBarCh3.Enabled= true;
-                //m_checkBoxSwitchCh3.Enabled= true;
-                //m_btnReadCh3.Enabled= true;
-                //m_btnWriteCh3.Enabled= true;
-
-                //// Enabled Advance Light Control Pannel.
-                //SettingPanel.Enabled = true;   //Enabled Setting Pannel
-                ////Set Holding Time Selected index
-                // m_advHoldTimeCH0.SelectedIndex = 0;
-                // m_advHoldTimeCH1.SelectedIndex = 0;
-                // m_advHoldTimeCH2.SelectedIndex = 0;
-                // m_advHoldTimeCH3.SelectedIndex = 0;
             }
             else
             {
                 advLightControl.Enabled = false;      // Disabled Light Control Tab Control Pannel
-                //// Channel 0
-                //m_comboBoxModeCh0.Enabled = false;
-                //m_HoldingTimeCh0.Enabled = false;
-                //m_numericUpDownCh0.Enabled = false;
-                //m_trackBarCh0.Enabled = false;
-                //m_checkBoxSwitchCh0.Enabled = false;
-                //m_btnReadCh0.Enabled = false;
-                //m_btnWriteCh0.Enabled = false;
-                //// Channel 1 
-                //m_comboBoxModeCh1.Enabled = false;
-                //m_HoldingTimeCh1.Enabled = false;
-                //m_numericUpDownCh1.Enabled = false;
-                //m_trackBarCh1.Enabled = false;
-                //m_checkBoxSwitchCh1.Enabled = false;
-                //m_btnReadCh1.Enabled = false;
-                //m_btnWriteCh1.Enabled = false;
-                //// Channel 2 
-                //m_comboBoxModeCh2.Enabled = false;
-                //m_HoldingTimeCh2.Enabled = false;
-                //m_numericUpDownCh2.Enabled = false;
-                //m_trackBarCh2.Enabled = false;
-                //m_checkBoxSwitchCh2.Enabled = false;
-                //m_btnReadCh2.Enabled = false;
-                //m_btnWriteCh2.Enabled = false;
-                //// Channel 3 
-                //m_comboBoxModeCh3.Enabled = false;
-                //m_HoldingTimeCh3.Enabled = false;
-                //m_numericUpDownCh3.Enabled = false;
-                //m_trackBarCh3.Enabled = false;
-                //m_checkBoxSwitchCh3.Enabled = false;
-                //m_btnReadCh3.Enabled = false;
-                //m_btnWriteCh3.Enabled = false;
-
-                //// Disabled Advance Light Control Pannel.
-                //SettingPanel.Enabled = false;   //Disabled Setting Pannel
+              
             }
         }
 
@@ -290,6 +216,175 @@ namespace VARLightControl
         {
             // Notification Process
             NativeAPI.DIOLC_Process();
+            if(m_dioTestStartFlag==1)
+            {
+                m_diValueL = NativeAPI.DIO_PollingReadDiByte(0);
+                m_doValueH = NativeAPI.DIO_PollingReadDiByte(1);
+
+                if ((m_diValueL & 0x01) == 0x01)
+                {
+                    m_lblDI0.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI0.BackColor = Color.Gray;
+                }
+
+                if((m_diValueL & 0x02)==0x02)
+                {
+                    m_lblDI1.BackColor=Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI1.BackColor = Color.Gray;
+                }
+
+                if((m_diValueL & 0x04)==0x04)
+                {
+                    m_lblDI2.BackColor=Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI2.BackColor = Color.Gray;
+                }
+
+                if((m_diValueL & 0x08)==0x08)
+                {
+                    m_lblDI3.BackColor=Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI3.BackColor = Color.Gray;
+                }
+
+                if((m_diValueL & 0x10)==0x10)
+                {
+                    m_lblDI4.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI4.BackColor = Color.Gray;
+                }
+
+                if((m_diValueL & 0x20)==0x20)
+                {
+                    m_lblDI5.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI5.BackColor = Color.Gray;
+                }
+
+                if((m_diValueL & 0x40)==0x40)
+                {
+                    m_lblDI6.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI6.BackColor = Color.Gray;
+                }
+
+                if((m_diValueL & 0x80)==0x80)
+                {
+                    m_lblDI7.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI7.BackColor = Color.Gray;
+                }
+
+                // di8~15
+                if ((m_diValueH & 0x01) == 0x01)
+                {
+                    m_lblDI8.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI8.BackColor = Color.Gray;
+                }
+
+                if ((m_diValueH & 0x02) == 0x02)
+                {
+                    m_lblDI9.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI9.BackColor = Color.Gray;
+                }
+
+                if((m_diValueH & 0x04)==0x04)
+                {
+                    m_lblDI10.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI10.BackColor = Color.Gray;
+                }
+
+                if((m_diValueH & 0x08)==0x08)
+                {
+                    m_lblDI11.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI11.BackColor = Color.Gray;
+                }
+
+                if((m_diValueH & 0x10)==0x10)
+                {
+                    m_lblDI12.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI12.BackColor = Color.Gray;
+                }
+
+                if((m_diValueH & 0x20)==0x20)
+                {
+                    m_lblDI13.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI13.BackColor = Color.Gray;
+                }
+
+                if((m_diValueH & 0x40)==0x40)
+                {
+                    m_lblDI14.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI14.BackColor = Color.Gray;
+                }
+
+                if((m_diValueH & 0x80)==0x80)
+                {
+                    m_lblDI15.BackColor = Color.LimeGreen;
+                }
+                else
+                {
+                    m_lblDI15.BackColor = Color.Gray;
+                }
+            }
+            else
+            {
+                m_lblDI0.BackColor = Color.Gray;
+                m_lblDI1.BackColor = Color.Gray;
+                m_lblDI2.BackColor = Color.Gray;
+                m_lblDI3.BackColor = Color.Gray;
+                m_lblDI4.BackColor = Color.Gray;
+                m_lblDI5.BackColor = Color.Gray;
+                m_lblDI6.BackColor = Color.Gray;
+                m_lblDI7.BackColor = Color.Gray;
+                m_lblDI8.BackColor = Color.Gray;
+                m_lblDI9.BackColor = Color.Gray;
+                m_lblDI10.BackColor = Color.Gray;
+                m_lblDI11.BackColor = Color.Gray;
+                m_lblDI12.BackColor = Color.Gray;
+                m_lblDI13.BackColor = Color.Gray;
+                m_lblDI14.BackColor = Color.Gray;
+                m_lblDI15.BackColor = Color.Gray;
+            }
         }
 
         //*************************************************** CHANNEL 3 ***************************************************//
@@ -683,6 +778,204 @@ namespace VARLightControl
         private void m_checkBoxDO_CheckedChanged(object sender, EventArgs e)
         {
             if (m_dioTestStartFlag == 1)
+            {
+                Byte flag = 0x01;
+                if (!m_checkBoxDO0.Checked)
+                {
+                    flag = 0x01;
+                    flag = (Byte)(~flag);
+                    m_doValueL &= flag;
+                }
+                else
+                {
+                    flag = 0x01;
+                    m_doValueL |= flag;
+                }
+
+                if(!m_checkBoxDO1.Checked)
+                {
+                    flag = 0x02;
+                    flag = (Byte)(~flag);
+                    m_doValueL &= flag;
+                }
+                else
+                {
+                    flag = 0x02;   
+                    m_doValueL |= flag;
+                }
+
+                if(!m_checkBoxDO2.Checked)
+                {
+                    flag= 0x04;
+                    flag = (Byte)(~flag);
+                    m_doValueL &= flag;
+                }
+                else
+                {
+                    flag = 0x04;
+                    m_doValueL |= flag;
+                }
+
+                if(!m_checkBoxDO3.Checked)
+                {
+                    flag= 0x08;
+                    flag = (Byte)(~flag);
+                    m_doValueL &= flag;
+                }
+                else
+                {
+                    flag= 0x08;
+                    m_doValueL |= flag;
+                }
+
+                if(!m_checkBoxDO4.Checked)
+                {
+                    flag= 0x10;
+                    flag = (Byte)(~flag);
+                    m_doValueL &= flag;
+                }
+                else
+                {
+                    flag= 0x10;
+                    m_doValueL |= flag;
+                }
+
+                if(!m_checkBoxDO5.Checked)
+                {
+                    flag= 0x20;
+                    flag = (Byte)(~flag);
+                    m_doValueL &= flag;
+                }
+                else
+                {
+                    flag= 0x20;
+                    m_doValueL |= flag;
+                }
+
+                if(!m_checkBoxDO6.Checked)
+                {
+                    flag= 0x40;
+                    flag= (Byte)(~flag);
+                    m_doValueL &= flag;
+                }
+                else
+                {
+                    flag= 0x40;
+                    m_doValueL |= flag;
+                }
+
+                if(!m_checkBoxDO7.Checked)
+                {
+                    flag= 0x80;
+                    flag = (Byte)(~flag);
+                    m_doValueL &= flag;
+                }
+                else
+                {
+                    flag= 0x80;
+                    m_doValueL |= flag;
+                }
+
+                // start Second port
+                if (!m_checkBoxDO8.Checked)
+                {
+                    flag = 0x01;
+                    flag = (Byte)(~flag);
+                    m_doValueH &= flag;
+                }
+                else
+                {
+                    flag = 0x01;
+                    m_doValueH |= flag;
+                }
+
+                if(!m_checkBoxDO9.Checked)
+                {
+                    flag= 0x02;
+                    flag = (Byte)(~flag);
+                    m_doValueH &= flag;
+                }
+                else
+                {
+                    flag= 0x02;
+                    m_doValueH |= flag;
+                }
+
+                if(!m_checkBoxDO10.Checked)
+                {
+                    flag= 0x04;
+                    flag = (Byte)(~flag);
+                    m_doValueH &= flag;
+                }
+                else
+                {
+                    flag = 0x04;
+                    m_doValueH |= flag;
+                }
+
+                if(!m_checkBoxDO11.Checked)
+                {
+                    flag= 0x08;
+                    flag = (Byte)(~flag);
+                    m_doValueH &= flag;
+                }
+                else
+                {
+                    flag= 0x08;
+                    m_doValueH |= flag;
+                }
+
+                if(!m_checkBoxDO12.Checked)
+                {
+                    flag= 0x10;
+                    flag = (Byte)(~flag);
+                    m_doValueH &= flag;
+                }
+                else
+                {
+                    flag= 0x10;
+                    m_doValueH |= flag;
+                }
+
+                if(!m_checkBoxDO13.Checked)
+                {
+                    flag= 0x20;
+                    flag = (Byte)(~flag);
+                    m_doValueH &= flag;
+                }
+                else
+                {
+                    flag= 0x20;
+                    m_doValueH |= flag;
+                }
+
+                if(m_checkBoxDO14.Checked)
+                {
+                    flag= 0x40;
+                    flag = (Byte)(~flag);
+                    m_doValueH &= flag;
+                }
+                else
+                {
+                    flag= 0x40;
+                    m_doValueH |= flag;
+                }
+
+                if(m_checkBoxDO15.Checked)
+                {
+                    flag= 0x80;
+                    flag = (Byte)(~flag);
+                    m_doValueH &= flag;
+                }
+                else
+                {
+                    flag= 0x80;
+                    m_doValueH |= flag;
+                }
+                NativeAPI.DIO_PollingWriteDoByte(0, (Byte)m_doValueL);      // first 8 bit range 0 to 7
+                NativeAPI.DIO_PollingWriteDoByte(1, (Byte)m_doValueH);      // 2nd 8 bit range 8 to 15
+            }
+            else
             {
 
             }
