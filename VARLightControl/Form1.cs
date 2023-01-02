@@ -454,8 +454,6 @@ namespace VARLightControl
             this.m_trackBarCh3.Value = m_pwmValueCh3;
         }
 
-
-
         public static void setPwmParamsCallBackCh3(LC_CALLBACK_ARG_T args)
         {
             if (args.setPwmParamsCallbackArg.error > 0)
@@ -777,200 +775,453 @@ namespace VARLightControl
         // Digital Output
         private void m_checkBoxDO_CheckedChanged(object sender, EventArgs e)
         {
+            //if (m_dioTestStartFlag == 1)          // Old Nodka
+            //{
+            //    Byte flag = 0x01;
+            //    if (!m_checkBoxDO0.Checked)
+            //    {
+            //        flag = 0x01;
+            //        flag = (Byte)(~flag);
+            //        m_doValueL &= flag;                 // same as m_doValueL = m_doValueL & flag  
+            //    }
+            //    else
+            //    {
+            //        flag = 0x01;
+            //        m_doValueL |= flag;         //0000 0001 = 1
+            //    }
+
+            //    if(!m_checkBoxDO1.Checked)
+            //    {
+            //        flag = 0x02;
+            //        flag = (Byte)(~flag);       // 255 after ~ -254 after conver positive it will be 253
+            //        m_doValueL &= flag;         // doval 0000 0001  & 1111 1101 
+            //    }
+            //    else
+            //    {
+            //        flag = 0x02;   
+            //        m_doValueL |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO2.Checked)
+            //    {
+            //        flag= 0x04;
+            //        flag = (Byte)(~flag);       // 153 afte ~ -152 after conver + it will be 151
+            //        m_doValueL &= flag;         // doval 0000 0001 & 1001 0111 doval is 1
+            //    }
+            //    else
+            //    {
+            //        flag = 0x04;
+            //        m_doValueL |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO3.Checked)
+            //    {
+            //        flag= 0x08;
+            //        flag = (Byte)(~flag);
+            //        m_doValueL &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x08;
+            //        m_doValueL |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO4.Checked)
+            //    {
+            //        flag= 0x10;
+            //        flag = (Byte)(~flag);
+            //        m_doValueL &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x10;
+            //        m_doValueL |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO5.Checked)
+            //    {
+            //        flag= 0x20;
+            //        flag = (Byte)(~flag);
+            //        m_doValueL &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x20;
+            //        m_doValueL |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO6.Checked)
+            //    {
+            //        flag= 0x40;
+            //        flag= (Byte)(~flag);
+            //        m_doValueL &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x40;
+            //        m_doValueL |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO7.Checked)
+            //    {
+            //        flag= 0x80;
+            //        flag = (Byte)(~flag);
+            //        m_doValueL &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x80;
+            //        m_doValueL |= flag;
+            //    }
+
+            //    // start Second port
+            //    if (!m_checkBoxDO8.Checked)
+            //    {
+            //        flag = 0x01;
+            //        flag = (Byte)(~flag);
+            //        m_doValueH &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag = 0x01;
+            //        m_doValueH |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO9.Checked)
+            //    {
+            //        flag= 0x02;
+            //        flag = (Byte)(~flag);
+            //        m_doValueH &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x02;
+            //        m_doValueH |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO10.Checked)
+            //    {
+            //        flag= 0x04;
+            //        flag = (Byte)(~flag);
+            //        m_doValueH &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag = 0x04;
+            //        m_doValueH |= flag;     // same as m_doValueH = m_doValueH | flag;
+            //    }
+
+            //    if(!m_checkBoxDO11.Checked)
+            //    {
+            //        flag= 0x08;
+            //        flag = (Byte)(~flag);
+            //        m_doValueH &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x08;
+            //        m_doValueH |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO12.Checked)
+            //    {
+            //        flag= 0x10;
+            //        flag = (Byte)(~flag);
+            //        m_doValueH &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x10;
+            //        m_doValueH |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO13.Checked)
+            //    {
+            //        flag= 0x20;
+            //        flag = (Byte)(~flag);
+            //        m_doValueH &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x20;
+            //        m_doValueH |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO14.Checked)
+            //    {
+            //        flag= 0x40;
+            //        flag = (Byte)(~flag);
+            //        m_doValueH &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x40;
+            //        m_doValueH |= flag;
+            //    }
+
+            //    if(!m_checkBoxDO15.Checked)
+            //    {
+            //        flag= 0x80;
+            //        flag = (Byte)(~flag);
+            //        m_doValueH &= flag;
+            //    }
+            //    else
+            //    {
+            //        flag= 0x80;
+            //        m_doValueH |= flag;
+            //    }
+            //    NativeAPI.DIO_PollingWriteDoByte(0, (Byte)m_doValueL);      // first 8 bit range 0 to 7
+            //    NativeAPI.DIO_PollingWriteDoByte(1, (Byte)m_doValueH);      // 2nd 8 bit range 8 to 15
+            //}
+            //else
+            //{
+
+            //}
+
             if (m_dioTestStartFlag == 1)
             {
                 Byte flag = 0x01;
-                if (!m_checkBoxDO0.Checked)
+                if (m_checkBoxDO0.Checked)
                 {
                     flag = 0x01;
                     flag = (Byte)(~flag);
-                    m_doValueL &= flag;
+                    m_doValueL &= flag;                 // same as m_doValueL = m_doValueL & flag  
+
+                    // Change button color
+                    m_checkBoxDO0.BackColor = Color.Green;
                 }
                 else
                 {
                     flag = 0x01;
-                    m_doValueL |= flag;
+                    m_doValueL |= flag;         //0000 0001 = 1
+                    m_checkBoxDO0.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO1.Checked)
+                if (m_checkBoxDO1.Checked)
                 {
                     flag = 0x02;
-                    flag = (Byte)(~flag);
-                    m_doValueL &= flag;
+                    flag = (Byte)(~flag);       // 255 after ~ -254 after conver positive it will be 253
+                    m_doValueL &= flag;         // doval 0000 0001  & 1111 1101 
+
+                    m_checkBoxDO1.BackColor= Color.Green;
                 }
                 else
                 {
-                    flag = 0x02;   
+                    flag = 0x02;
                     m_doValueL |= flag;
+                    m_checkBoxDO1.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO2.Checked)
+                if (m_checkBoxDO2.Checked)
                 {
-                    flag= 0x04;
-                    flag = (Byte)(~flag);
-                    m_doValueL &= flag;
+                    flag = 0x04;
+                    flag = (Byte)(~flag);       // 153 afte ~ -152 after conver + it will be 151
+                    m_doValueL &= flag;         // doval 0000 0001 & 1001 0111 doval is 1
+
+                    m_checkBoxDO2.BackColor = Color.Green;
                 }
                 else
                 {
                     flag = 0x04;
                     m_doValueL |= flag;
+                    m_checkBoxDO2.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO3.Checked)
+                if (m_checkBoxDO3.Checked)
                 {
-                    flag= 0x08;
+                    flag = 0x08;
                     flag = (Byte)(~flag);
                     m_doValueL &= flag;
+
+                    m_checkBoxDO3.BackColor = Color.Green;
                 }
                 else
                 {
-                    flag= 0x08;
+                    flag = 0x08;
                     m_doValueL |= flag;
+                    m_checkBoxDO3.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO4.Checked)
+                if (m_checkBoxDO4.Checked)
                 {
-                    flag= 0x10;
+                    flag = 0x10;
                     flag = (Byte)(~flag);
                     m_doValueL &= flag;
+
+                    m_checkBoxDO4.BackColor = Color.Green;
                 }
                 else
                 {
-                    flag= 0x10;
+                    flag = 0x10;
                     m_doValueL |= flag;
+                    m_checkBoxDO4.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO5.Checked)
+                if (m_checkBoxDO5.Checked)
                 {
-                    flag= 0x20;
+                    flag = 0x20;
                     flag = (Byte)(~flag);
                     m_doValueL &= flag;
+
+                    m_checkBoxDO5.BackColor = Color.Green;
                 }
                 else
                 {
-                    flag= 0x20;
+                    flag = 0x20;
                     m_doValueL |= flag;
+                    m_checkBoxDO5.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO6.Checked)
+                if (m_checkBoxDO6.Checked)
                 {
-                    flag= 0x40;
-                    flag= (Byte)(~flag);
-                    m_doValueL &= flag;
-                }
-                else
-                {
-                    flag= 0x40;
-                    m_doValueL |= flag;
-                }
-
-                if(!m_checkBoxDO7.Checked)
-                {
-                    flag= 0x80;
+                    flag = 0x40;
                     flag = (Byte)(~flag);
                     m_doValueL &= flag;
+
+                    m_checkBoxDO6.BackColor = Color.Green;
                 }
                 else
                 {
-                    flag= 0x80;
+                    flag = 0x40;
                     m_doValueL |= flag;
+
+                    m_checkBoxDO6.BackColor = Color.Gray;
+                }
+
+                if (m_checkBoxDO7.Checked)
+                {
+                    flag = 0x80;
+                    flag = (Byte)(~flag);
+                    m_doValueL &= flag;
+
+                    m_checkBoxDO7.BackColor = Color.Green;
+                }
+                else
+                {
+                    flag = 0x80;
+                    m_doValueL |= flag;
+                    m_checkBoxDO7.BackColor = Color.Gray;
                 }
 
                 // start Second port
-                if (!m_checkBoxDO8.Checked)
+                if (m_checkBoxDO8.Checked)
                 {
                     flag = 0x01;
                     flag = (Byte)(~flag);
                     m_doValueH &= flag;
+
+                    m_checkBoxDO8.BackColor= Color.Green;
                 }
                 else
                 {
                     flag = 0x01;
                     m_doValueH |= flag;
+                    m_checkBoxDO8.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO9.Checked)
+                if (m_checkBoxDO9.Checked)
                 {
-                    flag= 0x02;
+                    flag = 0x02;
                     flag = (Byte)(~flag);
                     m_doValueH &= flag;
+
+                    m_checkBoxDO9.BackColor= Color.Green;
                 }
                 else
                 {
-                    flag= 0x02;
+                    flag = 0x02;
                     m_doValueH |= flag;
+                    m_checkBoxDO9.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO10.Checked)
+                if (m_checkBoxDO10.Checked)
                 {
-                    flag= 0x04;
+                    flag = 0x04;
                     flag = (Byte)(~flag);
                     m_doValueH &= flag;
+
+                    m_checkBoxDO10.BackColor= Color.Green;
                 }
                 else
                 {
                     flag = 0x04;
-                    m_doValueH |= flag;
+                    m_doValueH |= flag;     // same as m_doValueH = m_doValueH | flag;
+                    m_checkBoxDO10.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO11.Checked)
+                if (m_checkBoxDO11.Checked)
                 {
-                    flag= 0x08;
+                    flag = 0x08;
                     flag = (Byte)(~flag);
                     m_doValueH &= flag;
+
+                    m_checkBoxDO11.BackColor= Color.Green;
                 }
                 else
                 {
-                    flag= 0x08;
+                    flag = 0x08;
                     m_doValueH |= flag;
+                    m_checkBoxDO11.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO12.Checked)
+                if (m_checkBoxDO12.Checked)
                 {
-                    flag= 0x10;
+                    flag = 0x10;
                     flag = (Byte)(~flag);
                     m_doValueH &= flag;
+
+                    m_checkBoxDO12.BackColor= Color.Green;
                 }
                 else
                 {
-                    flag= 0x10;
+                    flag = 0x10;
                     m_doValueH |= flag;
+                    m_checkBoxDO12.BackColor = Color.Gray;
                 }
 
-                if(!m_checkBoxDO13.Checked)
+                if (m_checkBoxDO13.Checked)
                 {
-                    flag= 0x20;
+                    flag = 0x20;
                     flag = (Byte)(~flag);
                     m_doValueH &= flag;
+
+                    m_checkBoxDO13.BackColor= Color.Green;
                 }
                 else
                 {
-                    flag= 0x20;
+                    flag = 0x20;
                     m_doValueH |= flag;
+                    m_checkBoxDO13.BackColor = Color.Gray;
                 }
 
-                if(m_checkBoxDO14.Checked)
+                if (m_checkBoxDO14.Checked)
                 {
-                    flag= 0x40;
+                    flag = 0x40;
                     flag = (Byte)(~flag);
                     m_doValueH &= flag;
+
+                    m_checkBoxDO14.BackColor= Color.Green;
                 }
                 else
                 {
-                    flag= 0x40;
+                    flag = 0x40;
                     m_doValueH |= flag;
+                    m_checkBoxDO14.BackColor = Color.Gray;
                 }
 
-                if(m_checkBoxDO15.Checked)
+                if (m_checkBoxDO15.Checked)
                 {
-                    flag= 0x80;
+                    flag = 0x80;
                     flag = (Byte)(~flag);
                     m_doValueH &= flag;
+
+                    m_checkBoxDO15.BackColor= Color.Green;
                 }
                 else
                 {
-                    flag= 0x80;
+                    flag = 0x80;
                     m_doValueH |= flag;
+                    m_checkBoxDO15.BackColor = Color.Gray;
                 }
                 NativeAPI.DIO_PollingWriteDoByte(0, (Byte)m_doValueL);      // first 8 bit range 0 to 7
                 NativeAPI.DIO_PollingWriteDoByte(1, (Byte)m_doValueH);      // 2nd 8 bit range 8 to 15
