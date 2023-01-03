@@ -1225,6 +1225,7 @@ namespace VARLightControl
                 }
                 NativeAPI.DIO_PollingWriteDoByte(0, (Byte)m_doValueL);      // first 8 bit range 0 to 7
                 NativeAPI.DIO_PollingWriteDoByte(1, (Byte)m_doValueH);      // 2nd 8 bit range 8 to 15
+                //NativeAPI.DIO_PollingWriteDoByte(1, 10);      // on Second port 3rd bit
             }
             else
             {
