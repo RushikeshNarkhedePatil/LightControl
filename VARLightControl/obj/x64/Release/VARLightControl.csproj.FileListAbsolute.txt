@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\bin\x64\Release\VARLightControl.exe.config
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\bin\x64\Release\VARLightControl.exe
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\bin\x64\Release\VARLightControl.pdb
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.Form1.resources
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.LoginForm.resources
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.Properties.Resources.resources
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.exe
+C:\Users\Administrator\source\repos\VARLightControl\VARLightControl\obj\x64\Release\VARLightControl.pdb

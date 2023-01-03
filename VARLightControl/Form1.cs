@@ -77,6 +77,7 @@ namespace VARLightControl
             pThis = this;
             //SettingPanel.Enabled = false;   //Disabled Setting Pannel
             //this.m_comboBoxModeCh3.SelectedIndex = 0;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // Stop from size Incresing.
 
             this.m_comboBoxPort.Items.Add("COM3");      // Add ComboBox Item Value
             this.m_comboBoxPort.SelectedItem = "COM3";  
@@ -1225,7 +1226,7 @@ namespace VARLightControl
                 }
                 NativeAPI.DIO_PollingWriteDoByte(0, (Byte)m_doValueL);      // first 8 bit range 0 to 7
                 NativeAPI.DIO_PollingWriteDoByte(1, (Byte)m_doValueH);      // 2nd 8 bit range 8 to 15
-                //NativeAPI.DIO_PollingWriteDoByte(1, 10);      // on Second port 3rd bit
+                //NativeAPI.DIO_PollingWriteDoByte(1, 9);      // on Second port 3rd bit
             }
             else
             {

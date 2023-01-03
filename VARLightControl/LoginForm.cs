@@ -19,6 +19,8 @@ namespace VARLightControl
         public LoginForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // Stop from size Incresing.
+
             configFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.ini"); //Store all Model name and Config path info
             selectFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "select.ini"); //store selected file info inside selectedFilePath
 
